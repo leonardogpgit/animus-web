@@ -11,6 +11,22 @@
 }
 
 @font-face {
+  font-family: 'Quantico';
+  src: url('../fonts/Quantico-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quantico';
+  src: url('../fonts/Quantico-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'DescMenu';
   src: url('../fonts/DescMenu.ttf') format('truetype');
   font-weight: 400;
@@ -41,8 +57,8 @@
   --color-accent-800: #115e59;
   --color-accent-900: #134e4a;
 
-  --font-sans: 'DescScor', ui-sans-serif, system-ui, sans-serif;
-  --font-heading: 'DescMenu', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Quantico', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'DescScor', ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Custom base layer for Dark Mode support and smooth transitions */
@@ -112,7 +128,7 @@
 
 /* Base styles for scroll animation classes */
 .reveal-on-scroll {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.45s ease;
 }
 

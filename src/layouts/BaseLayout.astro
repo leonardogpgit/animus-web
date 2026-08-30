@@ -156,8 +156,10 @@ const structuredData =
 
     <!-- Global Intersection Observer for Scroll Animations -->
     <script>
-      document.addEventListener('astro:page-load', () => {
+      const revealPageSections = () => {
         const elements = document.querySelectorAll('.reveal-on-scroll:not(.is-revealed)');
+        elements.forEach((el) => el.classList.add('is-revealed'));
+
         if (!elements.length) return;
 
         const observer = new IntersectionObserver((entries) => {
@@ -174,7 +176,10 @@ const structuredData =
         });
 
         elements.forEach((el) => observer.observe(el));
-      });
+      };
+
+      document.addEventListener('DOMContentLoaded', revealPageSections);
+      document.addEventListener('astro:page-load', revealPageSections);
     </script>
   </body>
 </html>
