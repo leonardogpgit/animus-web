@@ -1,10 +1,11 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'Animus';
-export const SITE_DESCRIPTION = 'A high-performance, 100/100 Lighthouse-optimized Astro 6 SaaS theme with dark mode, MDX blog, and command palette search.';
-export const SITE_URL = 'https://zenix.farrosfr.com';
-export const REPOSITORY_URL = 'https://github.com/farrosfr/zenix';
+export const SITE_TITLE = 'Animus Project';
+export const SITE_DESCRIPTION = 'An open, anonymous consensus network mapping the mind of humanity in real time. 100% free, privacy-first, and powered by reciprocity.';
+export const SITE_URL = 'https://animusproject.org';
+export const APP_URL = 'https://app.animusproject.org';
+export const REPOSITORY_URL = 'https://animusproject.org';
 
 // Brand Settings
 export const BRAND_NAME = 'Animus';
@@ -12,46 +13,36 @@ export const BRAND_LOGO_TEXT = 'A';
 
 // Social Links
 export const SOCIAL_LINKS = {
-  twitter: 'https://twitter.com/farrosfr_',
-  github: 'https://github.com/farrosfr',
-  linkedin: 'https://linkedin.com/in/yourhandle',
+  twitter: 'https://x.com/animusproject',
+  app: 'https://app.animusproject.org',
+  project: 'https://animusproject.org',
 };
 
 // Navigation Links
 export const NAV_LINKS = [
-  { href: '/#features', label: 'Features' },
-  { href: '/#testimonials', label: 'Testimonials' },
-  { href: '/pricing/', label: 'Pricing' },
-  { href: '/blog/', label: 'Blog' },
+  { href: '/#features', label: 'How It Works' },
+  { href: '/#graph', label: 'The Graph' },
+  { href: '/#faq', label: 'FAQ' },
+  { href: 'https://app.animusproject.org', label: 'The App' },
 ];
 
 // Footer Links
 export const FOOTER_LINKS = [
   {
-    title: 'Product',
+    title: 'Ecosystem',
     links: [
-      { label: 'Features', href: '/#features' },
-      { label: 'Pricing', href: '/pricing/' },
-      { label: 'Changelog', href: '/changelog/' },
-      { label: 'Integrations', href: '#' },
+      { label: 'The App (Mobile)', href: 'https://app.animusproject.org' },
+      { label: 'How It Works', href: '/#features' },
+      { label: 'The Consensus Graph', href: '/#graph' },
+      { label: 'FAQ', href: '/#faq' },
     ],
   },
   {
-    title: 'Resources',
+    title: 'Legal & Privacy',
     links: [
-      { label: 'Blog', href: '/blog/' },
-      { label: 'Documentation', href: '#' },
-      { label: 'Community', href: '#' },
-      { label: 'Help Center', href: '#' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { label: 'About Us', href: '#' },
-      { label: 'Contact', href: '#' },
       { label: 'Privacy Policy', href: '/privacy/' },
       { label: 'Terms of Service', href: '/terms/' },
+      { label: 'app.animusproject.org', href: 'https://app.animusproject.org' },
     ],
   },
 ];

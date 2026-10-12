@@ -1,36 +1,38 @@
 ---
 import Button from './Button.astro';
 import Badge from './Badge.astro';
-import { resolvePath } from '../utils/navigation';
 ---
 
-<section class="relative pt-32 pb-32 lg:pt-48 lg:pb-40 overflow-hidden">
-  <!-- Complex Animated Background -->
-  <div class="absolute inset-0 -z-10 bg-white dark:bg-[#09090b]"></div>
-
+<section class="relative pt-32 pb-28 lg:pt-44 lg:pb-36 overflow-hidden">
+  <!-- Clean Background -->
+  <div class="absolute inset-0 -z-10 bg-[#fafafa] dark:bg-[#09090b]"></div>
   
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-on-scroll">
     <div class="flex justify-center mb-8">
-      <Badge variant="primary" class="px-4 py-1.5 text-sm border border-primary-200 dark:border-primary-800 bg-white dark:bg-primary-900/50">
-        <span class="mr-2">🚀</span> Animus v2.0 is now live
+      <Badge variant="primary" class="px-4 py-1.5 text-sm border border-primary-200 dark:border-primary-800 bg-white dark:bg-primary-950/50">
+        <span class="mr-2">🧠</span> Animus Mobile Beta Live
       </Badge>
     </div>
     
-    <h1 class="text-6xl sm:text-7xl lg:text-8xl font-heading font-extrabold tracking-tight text-slate-900 dark:text-white mb-8 max-w-5xl mx-auto leading-[1.1]">
-      A calmer foundation for <span class="text-gradient">modern SaaS websites.</span>
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-heading font-extrabold tracking-tight text-slate-900 dark:text-white mb-8 max-w-5xl mx-auto leading-[1.08]">
+      What do you think? <br/><span class="text-gradient">The mind of humanity in real time.</span>
     </h1>
     
-    <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-12 max-w-3xl mx-auto font-sans leading-relaxed">
-      A focused Astro theme with clean sections, fast pages, and thoughtful defaults for product teams.
+    <p class="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-12 max-w-3xl mx-auto font-sans leading-relaxed">
+      An open, anonymous network where authentic opinions unlock collective consensus. Answer to reveal the truth, earn credits to ask your own questions, and explore what people truly believe—without algorithms, paywalls, or noise.
     </p>
     
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-      <Button href={resolvePath('/pricing/')} variant="primary" size="lg" class="w-full sm:w-auto text-lg px-8 py-4 shadow-xl shadow-primary-500/20">
-        Start Building Now
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+      <Button href="https://app.animusproject.org" variant="primary" size="lg" class="w-full sm:w-auto text-base sm:text-lg px-8 py-4 shadow-xl shadow-primary-500/20 font-heading">
+        Get the Mobile App
       </Button>
-      <Button href="#features" variant="outline" size="lg" class="w-full sm:w-auto text-lg px-8 py-4 bg-white dark:bg-slate-900/50">
-        Explore Features
+      <Button href="#features" variant="outline" size="lg" class="w-full sm:w-auto text-base sm:text-lg px-8 py-4 bg-white dark:bg-slate-900/50 font-heading">
+        How It Works
       </Button>
     </div>
+
+    <p class="text-xs uppercase tracking-widest text-slate-400 dark:text-slate-500 font-sans">
+      100% Free · Radical Anonymity · Android & iOS
+    </p>
   </div>
 </section>

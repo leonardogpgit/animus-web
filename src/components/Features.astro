@@ -1,67 +1,70 @@
 ---
 ---
 
-<section id="features" class="py-32 bg-slate-50 dark:bg-[#0c0c0f] border-y border-slate-200 dark:border-slate-800 relative overflow-hidden">
+<section id="features" class="py-28 bg-slate-50 dark:bg-[#0c0c0f] border-y border-slate-200 dark:border-slate-800 relative overflow-hidden">
   <!-- Subtle dark background glow -->
   <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-200/50 via-transparent to-transparent dark:from-primary-900/10 dark:via-transparent dark:to-transparent"></div>
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center max-w-3xl mx-auto mb-20 reveal-on-scroll">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary-300 dark:border-primary-500/30 bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 text-xs font-semibold uppercase tracking-widest mb-4">
+        Core Dynamics
+      </span>
       <h2 class="text-4xl md:text-5xl font-heading font-extrabold text-slate-900 dark:text-white mb-6">
-        Everything you need, <br/><span class="text-slate-400 dark:text-slate-500">nothing you don't.</span>
+        Every voice counts. <br/><span class="text-slate-400 dark:text-slate-500">Every bias is removed.</span>
       </h2>
-      <p class="text-xl text-slate-600 dark:text-slate-400 font-sans">
-        Ditch the bloat. Animus gives you a powerful, composable foundation that scales from MVP to Enterprise.
+      <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 font-sans">
+        Animus is not a poll or an endless feed of arguments. It is a structured social network for the human mind, designed around reciprocity, anonymity, and graph relationships.
       </p>
     </div>
 
     <!-- Bento Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[minmax(260px,auto)_minmax(280px,auto)] gap-6 max-w-7xl mx-auto">
       
-      <!-- Feature 1: Large Span 2x2 -->
-      <div class="md:col-span-2 lg:row-span-2 glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll relative overflow-hidden group min-h-[420px] lg:min-h-0">
+      <!-- Feature 1: Large Span 2x2 (Neo4j Graph Database) -->
+      <div id="graph" class="md:col-span-2 lg:row-span-2 glass-panel p-8 flex flex-col reveal-on-scroll relative overflow-hidden group min-h-[420px] lg:min-h-0">
         <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="w-14 h-14 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 rounded-2xl flex items-center justify-center mb-6 shadow-inner" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`} />
-        <h3 class="text-3xl font-heading font-bold text-slate-900 dark:text-white mb-4 z-10">Blazing Fast Astro Architecture</h3>
-        <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8 flex-grow z-10">
-          Built on Astro's islands architecture, Animus ships zero JavaScript by default. Achieve perfect 100/100 Lighthouse scores without breaking a sweat, ensuring your visitors never wait.
+        <div class="w-14 h-14 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 rounded-2xl flex items-center justify-center mb-6 shadow-inner" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>`} />
+        <h3 class="text-2xl sm:text-3xl font-heading font-bold text-slate-900 dark:text-white mb-4 z-10">The Living Consensus Graph</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed mb-8 flex-grow z-10">
+          Built on a native Neo4j graph database. When people ask identical or overlapping questions, Animus intelligently consolidates them into single knowledge nodes. The result is an unprecedented, living dataset of real human opinions, priorities, and societal concerns.
         </p>
         
-        <!-- Decorative Code Block inside the Bento Box -->
-        <div class="bg-slate-900 dark:bg-[#111116] rounded-xl p-4 font-mono text-sm text-primary-300 shadow-2xl border border-slate-700 dark:border-slate-800 z-10 transform transition-transform group-hover:-translate-y-2 duration-500">
+        <!-- Decorative Graph / Cypher Block -->
+        <div class="bg-slate-900 dark:bg-[#111116] rounded-xl p-4 font-mono text-xs sm:text-sm text-primary-300 shadow-xl border border-slate-700 dark:border-slate-800 z-10 transform transition-transform group-hover:-translate-y-1 duration-500">
           <div class="flex gap-2 mb-3">
              <div class="w-2.5 h-2.5 rounded-full bg-slate-700"></div>
              <div class="w-2.5 h-2.5 rounded-full bg-slate-700"></div>
           </div>
-          <code>git clone https://github.com/farrosfr/zenix.git</code>
+          <code>MATCH (q:Question)-[:CONSENSUS]->(d:Demographics) RETURN q.title, d.ageGroup, d.breakdown</code>
         </div>
       </div>
 
-      <!-- Feature 2: Standard Span -->
-      <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll min-h-[320px] lg:min-h-0" style="transition-delay: 100ms;">
-        <div class="w-12 h-12 bg-accent-100 dark:bg-accent-900/40 text-accent-600 dark:text-accent-400 rounded-2xl flex items-center justify-center mb-6" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`} />
-        <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3">Conversion Optimized</h3>
-        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-          Designed using proven SaaS landing page heuristics. Every button, gradient, and layout choice is engineered to convert visitors.
+      <!-- Feature 2: Standard Span (Zero Bias) -->
+      <div class="glass-panel p-8 flex flex-col reveal-on-scroll min-h-[300px] lg:min-h-0" style="transition-delay: 100ms;">
+        <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 rounded-2xl flex items-center justify-center mb-6" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>`} />
+        <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3">Answer to Unlock</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base">
+          To see how the world thinks, you must commit your own answer first. No herd mentality, no prior influence, no seeing results beforehand. Pure, honest perspective.
         </p>
       </div>
 
-      <!-- Feature 3: Standard Span -->
-      <div class="glass-panel rounded-3xl p-8 flex flex-col reveal-on-scroll min-h-[320px] lg:min-h-0" style="transition-delay: 200ms;">
-        <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 rounded-2xl flex items-center justify-center mb-6" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>`} />
-        <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3">Tailwind v4 Native</h3>
-        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-          Built with the latest version of Tailwind CSS. Customize the entire theme's typography and color palette from a single config file.
+      <!-- Feature 3: Standard Span (Radical Privacy) -->
+      <div class="glass-panel p-8 flex flex-col reveal-on-scroll min-h-[300px] lg:min-h-0" style="transition-delay: 200ms;">
+        <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 rounded-2xl flex items-center justify-center mb-6" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>`} />
+        <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-3">Radical Privacy</h3>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base">
+          Your personal identity does not interest us. No names, phone numbers, or social graphs. Only high-level age brackets, gender, and general geography to reveal genuine demographic patterns.
         </p>
       </div>
 
-      <!-- Feature 4: Horizontal Span -->
-      <div class="md:col-span-2 lg:col-start-3 lg:row-start-2 glass-panel rounded-3xl p-8 flex flex-col sm:flex-row items-center gap-8 reveal-on-scroll min-h-[280px] lg:min-h-0" style="transition-delay: 300ms;">
+      <!-- Feature 4: Horizontal Span (Reciprocity Loop) -->
+      <div class="md:col-span-2 lg:col-start-3 lg:row-start-2 glass-panel p-8 flex flex-col sm:flex-row items-center gap-8 reveal-on-scroll min-h-[280px] lg:min-h-0" style="transition-delay: 300ms;">
         <div class="flex-grow">
-          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center mb-6" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>`} />
-          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-3">Powerful MDX Content Engine</h3>
-          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-            Write your blog posts and changelogs in Markdown or MDX. Render complex interactive components directly inside your written content with full Astro Content Collection type-safety.
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 rounded-2xl flex items-center justify-center mb-6" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`} />
+          <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-3">Reciprocal Engine: Give to Ask</h3>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base">
+            Every time you answer community questions, you earn participation credits. Those credits grant you the right to post your own questions and boost them across feeds. Millions of answers, zero spam, and authentic signal on topics that truly matter.
           </p>
         </div>
       </div>
