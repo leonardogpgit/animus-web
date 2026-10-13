@@ -3,7 +3,7 @@ import { NAV_LINKS, BRAND_NAME, BRAND_LOGO_TEXT } from '../config';
 import { resolvePath } from '../utils/navigation';
 ---
 
-<header class="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-slate-800 dark:bg-[#09090b]/80">
+<header class="sticky top-0 z-50 w-full border-b border-slate-300 bg-[#dfe6ee]/90 backdrop-blur-xl dark:border-slate-800 dark:bg-[#09090b]/80">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-14 items-center justify-between md:h-16">
       <!-- Logo -->
@@ -31,7 +31,7 @@ import { resolvePath } from '../utils/navigation';
           id="theme-toggle"
           data-theme-toggle
           type="button"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-black transition-colors hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-300 bg-[#f4f7fb] text-black shadow-xs transition-colors hover:bg-slate-200/70 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
           aria-label="Toggle theme"
         >
           <svg data-theme-dark-icon class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -41,7 +41,7 @@ import { resolvePath } from '../utils/navigation';
     </div>
 
     <!-- Mobile Navigation (Always visible, no hamburger) -->
-    <nav class="flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 border-t border-slate-200/70 py-2.5 dark:border-slate-800/70 md:hidden">
+    <nav class="flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 border-t border-slate-300/80 py-2.5 dark:border-slate-800/70 md:hidden">
       {NAV_LINKS.map(link => (
         <a href={resolvePath(link.href)} class="text-xs sm:text-sm font-medium text-black transition-colors hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">
           {link.label}

@@ -66,9 +66,9 @@
 /* Custom base layer for Dark Mode support and smooth transitions */
 @layer base {
   :root {
-    --bg-color: #fafafa;
+    --bg-color: #e6ecf2;
     --text-color: #0f172a;
-    --border-color: #e2e8f0;
+    --border-color: #cbd5e1;
   }
   
   .dark {
@@ -113,7 +113,7 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
+    background: #94a3b8;
     border-radius: 5px;
   }
   .dark ::-webkit-scrollbar-thumb {
@@ -124,11 +124,11 @@
 /* Utility layer for custom complex visual effects */
 @layer utilities {
   .glass-panel {
-    @apply bg-white/80 border border-slate-200 dark:bg-slate-900/80 dark:border-white/10 shadow-sm backdrop-blur-md rounded-2xl;
+    @apply bg-[#f4f7fb] border border-slate-300 dark:bg-slate-900/80 dark:border-white/10 shadow-md shadow-slate-900/5 dark:shadow-sm backdrop-blur-md rounded-2xl;
   }
   
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-300;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-600 dark:from-primary-400 dark:to-accent-300;
   }
 }
 

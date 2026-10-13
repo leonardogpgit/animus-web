@@ -21,10 +21,10 @@ const testimonials = [
 ];
 ---
 
-<section id="testimonials" class="py-28 bg-white dark:bg-[#09090b] relative overflow-hidden">
+<section id="testimonials" class="py-28 bg-[#dfe6ee] dark:bg-[#09090b] border-t border-slate-300 dark:border-slate-800 relative overflow-hidden">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center max-w-3xl mx-auto mb-20 reveal-on-scroll">
-      <h2 class="text-4xl md:text-5xl font-sans font-extrabold text-slate-900 dark:text-white mb-6">Real voices. <span class="text-slate-500 dark:text-slate-400">Zero noise.</span></h2>
+      <h2 class="text-4xl md:text-5xl font-sans font-extrabold text-slate-900 dark:text-white mb-6">Real voices. <span class="text-slate-600 dark:text-slate-400">Zero noise.</span></h2>
       <p class="text-lg sm:text-xl text-slate-700 dark:text-slate-300">
         Discover why people are replacing mindless scrolling with real, thoughtful consensus.
       </p>
@@ -34,7 +34,7 @@ const testimonials = [
       {testimonials.map((t, index) => (
         <div class="glass-panel p-8 flex flex-col h-full reveal-on-scroll relative group" style={`transition-delay: ${index * 100}ms;`}>
           <!-- Decorative quotation mark -->
-          <div class="absolute top-6 right-6 text-6xl text-slate-100 dark:text-slate-800/50 font-serif leading-none select-none">"</div>
+          <div class="absolute top-6 right-6 text-6xl text-slate-200 dark:text-slate-800/50 font-serif leading-none select-none">"</div>
           
           <blockquote class="text-slate-700 dark:text-slate-300 text-base sm:text-lg mb-8 flex-grow relative z-10 font-medium leading-relaxed font-sans">
             "{t.quote}"
