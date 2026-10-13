@@ -33,7 +33,7 @@ const siteURL = SITE_URL.endsWith('/') ? SITE_URL : `${SITE_URL}/`;
 const canonicalPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const canonicalURL = new URL(canonicalPath, siteURL).href;
 const imageURL = new URL(image, siteURL).href;
-const fullTitle = `${title} | ${SITE_TITLE}`;
+const fullTitle = title === 'AnimusProject' || !title ? 'AnimusProject' : `${title} | AnimusProject`;
 const robotsContent = 'index, follow';
 const structuredData =
   type === 'article'

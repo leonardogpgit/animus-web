@@ -1,0 +1,78 @@
+---
+import DocumentLayout from '../layouts/DocumentLayout.astro';
+
+const headings = [
+  { depth: 2, slug: 'part-i-privacy-policy', text: 'Part I — Privacy Policy' },
+  { depth: 3, slug: '1-radical-anonymity-by-design', text: '1. Radical Anonymity by Design' },
+  { depth: 3, slug: '2-information-we-collect', text: '2. Information We Collect' },
+  { depth: 3, slug: '3-how-we-use-aggregate-data', text: '3. How We Use Aggregate Data' },
+  { depth: 3, slug: '4-data-security', text: '4. Data Security' },
+  { depth: 2, slug: 'part-ii-terms-of-service', text: 'Part II — Terms of Service' },
+  { depth: 3, slug: '1-acceptance-of-terms', text: '1. Acceptance of Terms' },
+  { depth: 3, slug: '2-community-participation-free-access', text: '2. Community Participation & Free Access' },
+  { depth: 3, slug: '3-lawful-respectful-conduct', text: '3. Lawful & Respectful Conduct' },
+  { depth: 3, slug: '4-intellectual-property', text: '4. Intellectual Property' },
+  { depth: 3, slug: '5-disclaimer-of-warranties-limitation-of-liability', text: '5. Disclaimer & Limitation of Liability' },
+  { depth: 2, slug: 'contact', text: 'Contact' },
+];
+---
+
+<DocumentLayout
+  title="Legal — Privacy Policy & Terms"
+  description="Privacy Policy and Terms of Service for the Animus Project."
+  lastUpdated="October 2026"
+  headings={headings}
+>
+  <h2 id="part-i-privacy-policy">Part I — Privacy Policy</h2>
+
+  <h3 id="1-radical-anonymity-by-design">1. Radical Anonymity by Design</h3>
+  <p>Animus is founded on respect for human expression and radical anonymity. We do <strong>not</strong> want your personal identity, real name, email address, or contact list.</p>
+
+  <h3 id="2-information-we-collect">2. Information We Collect</h3>
+  <p>To generate meaningful sociological consensus without compromising your privacy, we collect only high-level, non-identifiable demographic markers:</p>
+  <ul>
+    <li><strong>Age Bracket</strong> — e.g., 25–34, 35–44, etc.</li>
+    <li><strong>Gender</strong> — for aggregate demographic distribution.</li>
+    <li><strong>General Location</strong> — broad region or country level to observe geographic perspective trends.</li>
+    <li><strong>Anonymous Responses &amp; Credits</strong> — your answers to questions and earned participation credits.</li>
+  </ul>
+  <p>We do <strong>not</strong> track your real identity, sell data to advertisers, or build personal tracking dossiers.</p>
+
+  <h3 id="3-how-we-use-aggregate-data">3. How We Use Aggregate Data</h3>
+  <ul>
+    <li>To compute real-time collective consensus and demographic comparisons in our Neo4j graph database.</li>
+    <li>To display anonymous trends, rankings, and statistical distributions.</li>
+    <li>To ensure fair reciprocity and question reputation via participation credits.</li>
+  </ul>
+
+  <h3 id="4-data-security">4. Data Security</h3>
+  <p>All network communication is encrypted in transit (TLS) and at rest following industry-standard security practices.</p>
+
+  <hr />
+
+  <h2 id="part-ii-terms-of-service">Part II — Terms of Service</h2>
+
+  <h3 id="1-acceptance-of-terms">1. Acceptance of Terms</h3>
+  <p>By accessing the Animus Project or downloading and using the Animus application, you agree to these Terms of Service. If you disagree, please discontinue use of the service.</p>
+
+  <h3 id="2-community-participation-free-access">2. Community Participation &amp; Free Access</h3>
+  <ul>
+    <li>Animus is 100% free to download and participate in.</li>
+    <li>Responding to questions and accessing aggregate community consensus incur no monetary fees.</li>
+    <li>Participation credits and boosters earned in-app through reciprocity govern question creation, deduplication, reach, and reputation.</li>
+  </ul>
+
+  <h3 id="3-lawful-respectful-conduct">3. Lawful &amp; Respectful Conduct</h3>
+  <p>You agree to use Animus only for lawful purposes. Users must not submit illegal, defamatory, or abusive content, or attempt to interfere with the network's integrity. Animus reserves the right to moderate or reject questions that violate human dignity or community standards.</p>
+
+  <h3 id="4-intellectual-property">4. Intellectual Property</h3>
+  <p>The Animus consensus graph, architecture, trademarks, and application code belong to the Animus Project. Aggregate statistical insights are shared in service of human knowledge and sociological research.</p>
+
+  <h3 id="5-disclaimer-of-warranties-limitation-of-liability">5. Disclaimer of Warranties &amp; Limitation of Liability</h3>
+  <p>The network and application are provided "as is" without warranties of any kind. While we strive for statistical accuracy and continuous availability, consensus reflects community input at a given moment in time. To the fullest extent permitted by law, the Animus Project is not liable for indirect, incidental, or consequential damages arising from use of the service.</p>
+
+  <hr />
+
+  <h2 id="contact">Contact</h2>
+  <p>For questions regarding this Legal policy, connect with the project on X at <a href="https://x.com/animusproject" target="_blank" rel="noopener noreferrer">@animusproject</a> or reach out through our official community channels.</p>
+</DocumentLayout>
