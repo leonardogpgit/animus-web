@@ -154,7 +154,19 @@ const structuredData =
     </main>
     <Footer />
 
-    <!-- Global Intersection Observer for Scroll Animations -->
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      type="button"
+      aria-label="Back to top"
+      class="fixed bottom-5 right-5 z-40 hidden h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white/90 text-black shadow-lg backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-indigo-500 hover:text-indigo-600 dark:border-slate-700 dark:bg-slate-900/90 dark:text-white dark:hover:border-indigo-400 dark:hover:text-indigo-400 md:bottom-8 md:right-8 md:h-11 md:w-11"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- Global Intersection Observer for Scroll Animations & BackToTop -->
     <script>
       const revealPageSections = () => {
         const elements = document.querySelectorAll('.reveal-on-scroll:not(.is-revealed)');
@@ -178,8 +190,35 @@ const structuredData =
         elements.forEach((el) => observer.observe(el));
       };
 
-      document.addEventListener('DOMContentLoaded', revealPageSections);
-      document.addEventListener('astro:page-load', revealPageSections);
+      const setupBackToTop = () => {
+        const btn = document.getElementById('back-to-top');
+        if (!btn) return;
+
+        const updateVisibility = () => {
+          const show = window.scrollY > 300;
+          btn.classList.toggle('hidden', !show);
+          btn.classList.toggle('flex', show);
+        };
+
+        updateVisibility();
+        window.addEventListener('scroll', updateVisibility, { passive: true });
+
+        if (btn.dataset.bound !== 'true') {
+          btn.dataset.bound = 'true';
+          btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+      };
+
+      document.addEventListener('DOMContentLoaded', () => {
+        revealPageSections();
+        setupBackToTop();
+      });
+      document.addEventListener('astro:page-load', () => {
+        revealPageSections();
+        setupBackToTop();
+      });
     </script>
   </body>
 </html>
