@@ -29,20 +29,10 @@ export const NAV_LINKS = [
 // Footer Links
 export const FOOTER_LINKS = [
   {
-    title: 'Ecosystem',
-    links: [
-      { label: 'The App (Mobile)', href: 'https://app.animusproject.org' },
-      { label: 'How It Works', href: '/#features' },
-      { label: 'The Consensus Graph', href: '/#graph' },
-      { label: 'FAQ', href: '/#faq' },
-    ],
-  },
-  {
     title: 'Legal & Privacy',
     links: [
       { label: 'Privacy Policy', href: '/privacy/' },
       { label: 'Terms of Service', href: '/terms/' },
-      { label: 'app.animusproject.org', href: 'https://app.animusproject.org' },
     ],
   },
 ];
