@@ -1,86 +1,93 @@
 ---
-import Button from './Button.astro';
 import { NAV_LINKS, BRAND_NAME, BRAND_LOGO_TEXT } from '../config';
 import { resolvePath } from '../utils/navigation';
 ---
 
-<header class="sticky top-0 z-[90] w-full transition-colors duration-300 glass-panel border-x-0 border-t-0 rounded-none shadow-sm pointer-events-auto">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-      <div class="flex-shrink-0">
-        <a href={resolvePath('/')} class="flex items-center gap-2.5 group font-sans">
-          <div class="w-9 h-9 bg-primary-600 dark:bg-primary-500 rounded-xl flex items-center justify-center transition-transform group-hover:scale-105 shadow-sm shadow-primary-500/30">
-            <span class="text-white font-bold text-lg leading-none">{BRAND_LOGO_TEXT}</span>
-          </div>
-          <span class="font-sans font-bold text-xl tracking-tight text-slate-900 dark:text-white transition-colors">{BRAND_NAME}</span>
-        </a>
-      </div>
+<header class="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-xl dark:border-slate-800 dark:bg-[#09090b]/80">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href={resolvePath('/')} class="flex items-center gap-3" aria-label="Go to home">
+        <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-lg font-bold text-white shadow-sm shadow-indigo-500/30">
+          {BRAND_LOGO_TEXT}
+        </div>
+        <span class="font-descscor text-xl font-bold tracking-tight text-black dark:text-white">
+          {BRAND_NAME}
+        </span>
+      </a>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-8 font-sans">
+      <nav class="hidden items-center gap-7 md:flex">
         {NAV_LINKS.map(link => (
-          <a href={resolvePath(link.href)} class="text-sm font-medium font-sans text-slate-700 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+          <a href={resolvePath(link.href)} class="text-sm font-medium text-black transition-colors hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">
             {link.label}
           </a>
         ))}
       </nav>
 
       <!-- CTA Buttons & Theme Toggle (Desktop) -->
-      <div class="hidden md:flex items-center gap-4 font-sans">
-        <!-- Search Button -->
-        <button 
-          onclick="window.toggleCommandPalette()"
-          class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium font-sans text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors"
-          aria-label="Search"
+      <div class="hidden items-center gap-3 md:flex">
+        <button
+          id="theme-toggle"
+          data-theme-toggle
+          type="button"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-black transition-colors hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
+          aria-label="Toggle theme"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-          <span>Search</span>
-          <kbd class="hidden lg:inline-flex h-5 items-center gap-1 rounded border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 px-1.5 font-mono text-[10px] font-medium text-slate-500">
-            <span class="text-xs">⌘</span>K
-          </kbd>
+          <svg data-theme-dark-icon class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg data-theme-light-icon class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
         </button>
 
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" data-theme-toggle type="button" class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg text-sm transition-colors" aria-label="Toggle theme">
-          <svg data-theme-dark-icon class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-          <svg data-theme-light-icon class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-        </button>
-
-        <Button href="https://app.animusproject.org" variant="primary" size="sm" class="font-sans">Get the App</Button>
+        <a
+          href="https://app.animusproject.org"
+          class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-indigo-500/30 transition-transform hover:-translate-y-0.5 hover:bg-indigo-500"
+        >
+          Get the App
+        </a>
       </div>
 
       <!-- Mobile menu button & Theme toggle -->
-      <div class="md:hidden flex items-center gap-2 font-sans">
-        <button onclick="window.toggleCommandPalette()" class="p-2 text-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none rounded-lg text-sm" aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+      <div class="flex items-center gap-2 md:hidden">
+        <button
+          id="mobile-theme-toggle"
+          data-theme-toggle
+          type="button"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-black transition-colors hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
+          aria-label="Toggle theme"
+        >
+          <svg data-theme-dark-icon class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg data-theme-light-icon class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
         </button>
 
-        <button id="mobile-theme-toggle" data-theme-toggle type="button" class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none rounded-lg text-sm" aria-label="Toggle theme">
-          <svg data-theme-dark-icon class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-          <svg data-theme-light-icon class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-        </button>
-        
-        <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none">
-          <span class="sr-only">Open main menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          aria-label="Toggle menu"
+          class="rounded-lg border border-slate-200 bg-white p-2 text-black transition-colors hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+            <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
     </div>
-  </div>
 
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      {NAV_LINKS.map(link => (
-        <a href={resolvePath(link.href)} class="block px-3 py-2 rounded-md text-base font-medium font-sans text-slate-800 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-slate-50 dark:hover:bg-slate-800">
-          {link.label}
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white/95 pb-4 pt-3 dark:border-slate-800 dark:bg-[#09090b]/95 md:hidden">
+      <nav class="flex flex-col gap-1">
+        {NAV_LINKS.map(link => (
+          <a href={resolvePath(link.href)} class="rounded-lg px-3 py-2 text-sm font-medium text-black transition-colors hover:bg-slate-100 hover:text-indigo-600 dark:text-white dark:hover:bg-slate-800 dark:hover:text-indigo-400">
+            {link.label}
+          </a>
+        ))}
+      </nav>
+      <div class="mt-4 px-3">
+        <a
+          href="https://app.animusproject.org"
+          class="inline-flex w-full items-center justify-center rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-500/30"
+        >
+          Get the App
         </a>
-      ))}
-      <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-2">
-        <Button href="https://app.animusproject.org" variant="primary" class="w-full text-center font-sans">Get the App</Button>
       </div>
     </div>
   </div>
