@@ -22,17 +22,16 @@ export const SOCIAL_LINKS = {
 export const NAV_LINKS = [
   { href: '/#features', label: 'How It Works' },
   { href: '/#graph', label: 'The Graph' },
-  { href: '/#faq', label: 'FAQ' },
+  { href: 'https://app.animusproject.org/faq', label: 'FAQ' },
   { href: 'https://app.animusproject.org', label: 'The App' },
 ];
 
 // Footer Links
 export const FOOTER_LINKS = [
   {
-    title: 'Legal & Privacy',
+    title: 'Legal',
     links: [
-      { label: 'Privacy Policy', href: '/privacy/' },
-      { label: 'Terms of Service', href: '/terms/' },
+      { label: 'Legal', href: 'https://app.animusproject.org/legal' },
     ],
   },
 ];

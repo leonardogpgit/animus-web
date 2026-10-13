@@ -2,7 +2,7 @@
 import { SITE_DESCRIPTION } from '../config';
 ---
 
-<section id="features" class="scroll-mt-20 py-20 sm:py-28 bg-slate-50 dark:bg-[#0c0c0f] border-y border-slate-200 dark:border-slate-800 relative overflow-hidden">
+<section id="features" class="scroll-mt-28 md:scroll-mt-20 py-20 sm:py-28 bg-slate-50 dark:bg-[#0c0c0f] border-y border-slate-200 dark:border-slate-800 relative overflow-hidden">
   <!-- Subtle dark background glow -->
   <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-200/50 via-transparent to-transparent dark:from-primary-900/10 dark:via-transparent dark:to-transparent"></div>
 
@@ -23,7 +23,7 @@ import { SITE_DESCRIPTION } from '../config';
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[minmax(260px,auto)_minmax(280px,auto)] gap-6 max-w-7xl mx-auto">
       
       <!-- Feature 1: Large Span 2x2 (Neo4j Graph Database) -->
-      <div id="graph" class="scroll-mt-20 md:col-span-2 lg:row-span-2 glass-panel p-6 sm:p-8 flex flex-col reveal-on-scroll relative overflow-hidden group min-h-[380px] lg:min-h-0">
+      <div id="graph" class="scroll-mt-28 md:scroll-mt-20 md:col-span-2 lg:row-span-2 glass-panel p-6 sm:p-8 flex flex-col reveal-on-scroll relative overflow-hidden group min-h-[380px] lg:min-h-0">
         <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div class="w-14 h-14 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 rounded-2xl flex items-center justify-center mb-6 shadow-inner" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>`} />
         <h3 class="text-2xl sm:text-3xl font-sans font-bold text-slate-900 dark:text-white mb-4 z-10">The Living Consensus Graph</h3>
