@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="120" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="sheen-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#181a1f" />
+      <stop offset="20%" stop-color="#282a33" />
+      <stop offset="45%" stop-color="#1e2027" />
+      <stop offset="50%" stop-color="#30333e" />
+      <stop offset="55%" stop-color="#1e2027" />
+      <stop offset="80%" stop-color="#252730" />
+      <stop offset="100%" stop-color="#14151a" />
+    </linearGradient>
+    <filter id="brushed-dark" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.8" numOctaves="3" result="noise" />
+      <feColorMatrix type="saturate" values="0" result="mono" />
+      <feComponentTransfer result="grain">
+        <feFuncR type="linear" slope="0.55" intercept="0.72" />
+        <feFuncG type="linear" slope="0.55" intercept="0.72" />
+        <feFuncB type="linear" slope="0.55" intercept="0.72" />
+      </feComponentTransfer>
+      <feBlend mode="multiply" in="SourceGraphic" in2="grain" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#sheen-dark)" filter="url(#brushed-dark)" />
+</svg>
