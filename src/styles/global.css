@@ -124,17 +124,6 @@
 
 /* Utility layer for custom complex visual effects */
 @layer utilities {
-  .metal-bar {
-    background-image: url('/textures/brushed_dark_steel.svg');
-    background-size: 100% 100%;
-    background-position: center;
-  }
-  :root.dark .metal-bar,
-  .dark .metal-bar {
-    background-image: url('/textures/brushed_titanium.svg');
-    background-size: 100% 100%;
-    background-position: center;
-  }
 
   .glass-panel {
     @apply bg-[#f4f7fb] border border-slate-300 dark:bg-slate-900/80 dark:border-white/10 shadow-md shadow-slate-900/5 dark:shadow-sm backdrop-blur-md rounded-2xl;

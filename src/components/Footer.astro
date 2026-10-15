@@ -3,14 +3,14 @@ import { FOOTER_LINKS, SOCIAL_LINKS } from '../config';
 import { resolvePath } from '../utils/navigation';
 ---
 
-<footer class="metal-bar w-full border-t border-black/30 dark:border-black/20 transition-colors">
+<footer class="w-full border-t border-slate-300 bg-white transition-colors dark:border-slate-800 dark:bg-[#09090b]">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-6 pb-4 md:pt-8 md:pb-5">
     <!-- Social Icons (dedicated line above legal) -->
     <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-3 md:mb-4">
       {SOCIAL_LINKS.map(item => (
         <a
           href={item.url}
-          class="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-black/40 text-white shadow-xs hover:bg-black/60 dark:border-black/20 dark:bg-white/40 dark:text-black dark:hover:bg-white/60 transition-colors"
+          class="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-300 bg-slate-100 text-black shadow-xs hover:bg-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800 transition-colors"
           target="_blank"
           rel="noopener noreferrer"
           aria-label={item.label}
@@ -30,7 +30,7 @@ import { resolvePath } from '../utils/navigation';
         <ul class="flex flex-wrap items-center justify-center gap-6">
           {group.links.map(link => (
             <li>
-              <a href={resolvePath(link.href)} class="text-sm font-medium text-white transition-opacity hover:opacity-80 dark:text-black dark:hover:opacity-70">
+              <a href={resolvePath(link.href)} class="text-sm font-medium text-black transition-opacity hover:opacity-70 dark:text-white dark:hover:opacity-80">
                 {link.label}
               </a>
             </li>
@@ -41,9 +41,9 @@ import { resolvePath } from '../utils/navigation';
   </div>
 
   <!-- Full-width divider & All rights reserved -->
-  <div class="metal-bar w-full border-t border-white/15 dark:border-black/15 py-4 md:py-5">
+  <div class="w-full border-t border-slate-300 bg-white py-4 dark:border-slate-800 dark:bg-[#09090b] md:py-5">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center">
-      <p class="text-sm text-white dark:text-black text-center font-medium">
+      <p class="text-center text-sm font-medium text-black dark:text-white">
         &copy; {new Date().getFullYear()} Animus Project. All rights reserved.
       </p>
     </div>

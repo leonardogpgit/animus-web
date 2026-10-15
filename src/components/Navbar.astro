@@ -3,15 +3,15 @@ import { NAV_LINKS, BRAND_NAME, BRAND_LOGO_TEXT } from '../config';
 import { resolvePath } from '../utils/navigation';
 ---
 
-<header class="metal-bar sticky top-0 z-50 w-full border-b border-black/30 dark:border-black/20">
+<header class="sticky top-0 z-50 w-full border-b border-slate-300 bg-white dark:border-slate-800 dark:bg-[#09090b]">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-14 items-center justify-between md:h-16">
       <!-- Logo -->
       <a href="https://animusproject.org" class="flex items-center gap-3" aria-label="Animus Project">
-        <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-black border border-white/20 text-lg font-bold text-white shadow-xs dark:bg-white dark:text-black dark:border-black/20">
+        <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-black border border-slate-300 text-lg font-bold text-white shadow-xs dark:bg-white dark:text-black dark:border-slate-800">
           {BRAND_LOGO_TEXT}
         </div>
-        <span class="font-descscor text-xl font-bold tracking-tight text-white dark:text-black">
+        <span class="font-descscor text-xl font-bold tracking-tight text-black dark:text-white">
           {BRAND_NAME}
         </span>
       </a>
@@ -19,7 +19,7 @@ import { resolvePath } from '../utils/navigation';
       <!-- Desktop Navigation -->
       <nav class="hidden items-center gap-7 md:flex">
         {NAV_LINKS.map(link => (
-          <a href={resolvePath(link.href)} class="text-sm font-medium text-white transition-opacity hover:opacity-80 dark:text-black dark:hover:opacity-70">
+          <a href={resolvePath(link.href)} class="text-sm font-medium text-black transition-opacity hover:opacity-70 dark:text-white dark:hover:opacity-80">
             {link.label}
           </a>
         ))}
@@ -31,7 +31,7 @@ import { resolvePath } from '../utils/navigation';
           id="theme-toggle"
           data-theme-toggle
           type="button"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-black/40 text-white shadow-xs transition-colors hover:bg-black/60 dark:border-black/20 dark:bg-white/40 dark:text-black dark:hover:bg-white/60"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-300 bg-slate-100 text-black shadow-xs transition-colors hover:bg-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
           aria-label="Toggle theme"
         >
           <svg data-theme-dark-icon class="hidden h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -41,9 +41,9 @@ import { resolvePath } from '../utils/navigation';
     </div>
 
     <!-- Mobile Navigation (Always visible, no hamburger) -->
-    <nav class="flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 border-t border-white/15 py-2.5 dark:border-black/15 md:hidden">
+    <nav class="flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 border-t border-slate-300 py-2.5 dark:border-slate-800 md:hidden">
       {NAV_LINKS.map(link => (
-        <a href={resolvePath(link.href)} class="text-xs sm:text-sm font-medium text-white transition-opacity hover:opacity-80 dark:text-black dark:hover:opacity-70">
+        <a href={resolvePath(link.href)} class="text-xs sm:text-sm font-medium text-black transition-opacity hover:opacity-70 dark:text-white dark:hover:opacity-80">
           {link.label}
         </a>
       ))}
