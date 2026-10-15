@@ -132,6 +132,29 @@
   .text-gradient {
     @apply text-black dark:text-white;
   }
+
+  .metal-bar-t1 {
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.28) 100%),
+      url('/textures/metal_dark_t1.webp');
+    background-repeat: repeat;
+    background-size: auto, 280px 280px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  }
+
+  :root.dark .metal-bar-t1,
+  .dark .metal-bar-t1 {
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.45) 0%, rgba(220, 230, 240, 0.12) 40%, rgba(0, 0, 0, 0.2) 100%),
+      url('/textures/metal_light_t1.webp');
+    background-repeat: repeat;
+    background-size: auto, 280px 280px;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  }
 }
 
 /* Base styles for scroll animation classes */
