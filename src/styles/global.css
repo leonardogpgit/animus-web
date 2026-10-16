@@ -3,14 +3,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
-  font-family: 'Orbitron';
-  src: url('../fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Michroma';
   src: url('../fonts/Michroma-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -51,12 +43,12 @@
   --color-accent-900: #0f172a;
 
   --font-sans: 'Tektur', ui-sans-serif, system-ui, sans-serif;
-  --font-heading: 'Orbitron', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Michroma', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Michroma', ui-sans-serif, system-ui, sans-serif;
-  --font-orbitron: 'Orbitron', sans-serif;
   --font-michroma: 'Michroma', sans-serif;
   --font-tektur: 'Tektur', sans-serif;
-  --font-descscor: 'Orbitron', sans-serif;
+  --font-orbitron: 'Michroma', sans-serif;
+  --font-descscor: 'Michroma', sans-serif;
   --font-descmenu: 'Michroma', sans-serif;
   --font-quantico: 'Tektur', sans-serif;
 }
@@ -89,14 +81,7 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  h1, h2 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: var(--text-color);
-  }
-
-  h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -107,8 +92,8 @@
     font-family: var(--font-display);
   }
 
-  .main-hero-title, .font-descscor {
-    font-family: var(--font-heading) !important;
+  .main-hero-title, .font-descscor, .font-orbitron, .font-heading {
+    font-family: var(--font-display) !important;
   }
 
   .font-descmenu {
