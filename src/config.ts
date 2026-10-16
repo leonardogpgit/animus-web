@@ -1,8 +1,8 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'AnimusProject';
-export const SITE_DESCRIPTION = 'An open, anonymous consensus network mapping the mind of humanity in real time. 100% free, privacy-first, and powered by reciprocity.';
+export const SITE_TITLE = 'Animus';
+export const SITE_DESCRIPTION = 'An open, anonymous consensus network. 100% free, privacy-first, and powered by reciprocity.';
 export const SITE_URL = 'https://animusproject.org';
 export const APP_URL = 'https://app.animusproject.org';
 export const REPOSITORY_URL = 'https://animusproject.org';

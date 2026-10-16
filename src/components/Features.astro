@@ -9,7 +9,7 @@ import { SITE_DESCRIPTION } from '../config';
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-20 reveal-on-scroll">
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-black dark:text-white mb-6">
-        Every voice counts. <br/><span class="text-black/80 dark:text-white/80 font-heading">Every bias is removed.</span>
+        Every voice counts. <br/><span class="text-black/80 dark:text-white/80 font-heading">Every bias removed.</span>
       </h2>
       <p class="text-lg sm:text-xl text-black dark:text-white font-medium font-sans mb-4">
         {SITE_DESCRIPTION}
@@ -26,9 +26,9 @@ import { SITE_DESCRIPTION } from '../config';
       <div id="graph" class="scroll-mt-28 md:scroll-mt-20 md:col-span-2 lg:row-span-2 glass-panel p-6 sm:p-8 flex flex-col reveal-on-scroll relative overflow-hidden group min-h-[380px] lg:min-h-0">
         <div class="absolute inset-0 bg-gradient-to-br from-black/5 dark:from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div class="w-14 h-14 bg-slate-200 dark:bg-slate-800 text-black dark:text-white border border-slate-300 dark:border-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-inner" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>`} />
-        <h3 class="text-2xl sm:text-3xl font-display font-bold text-black dark:text-white mb-4 z-10">The Living Consensus Graph</h3>
+        <h3 class="text-2xl sm:text-3xl font-display font-bold text-black dark:text-white mb-4 z-10">The Consensus Graph</h3>
         <p class="text-black dark:text-white text-base sm:text-lg leading-relaxed mb-8 flex-grow z-10 font-sans">
-          Built on a native Neo4j graph database. When people ask identical or overlapping questions, Animus intelligently consolidates them into single knowledge nodes. The result is an unprecedented, living dataset of real human opinions, priorities, and societal concerns.
+          Built on a Neo4j graph database. When people ask similar questions, Animus merges them into shared knowledge nodes, tracking demographic perspectives and trends over time.
         </p>
         
         <!-- Decorative Graph / Cypher Block -->
@@ -46,16 +46,16 @@ import { SITE_DESCRIPTION } from '../config';
         <div class="w-12 h-12 bg-slate-200 dark:bg-slate-800 text-black dark:text-white border border-slate-300 dark:border-white/10 rounded-2xl flex items-center justify-center mb-6" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>`} />
         <h3 class="text-xl font-display font-bold text-black dark:text-white mb-3">Answer to Unlock</h3>
         <p class="text-black dark:text-white leading-relaxed text-sm sm:text-base font-sans">
-          To see how the world thinks, you must commit your own answer first. No herd mentality, no prior influence, no seeing results beforehand. Pure, honest perspective.
+          You must submit your own answer before viewing community consensus. No herd behavior, no prior influence, and no visible percentages beforehand.
         </p>
       </div>
 
       <!-- Feature 3: Standard Span (Radical Privacy) -->
       <div class="glass-panel p-8 flex flex-col reveal-on-scroll min-h-[300px] lg:min-h-0" style="transition-delay: 200ms;">
         <div class="w-12 h-12 bg-slate-200 dark:bg-slate-800 text-black dark:text-white border border-slate-300 dark:border-white/10 rounded-2xl flex items-center justify-center mb-6" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>`} />
-        <h3 class="text-xl font-display font-bold text-black dark:text-white mb-3">Radical Privacy</h3>
+        <h3 class="text-xl font-display font-bold text-black dark:text-white mb-3">Anonymous by Design</h3>
         <p class="text-black dark:text-white leading-relaxed text-sm sm:text-base font-sans">
-          Your personal identity does not interest us. No names, phone numbers, or social graphs. Only high-level age brackets, gender, and general geography to reveal genuine demographic patterns.
+          No real names, phone numbers, email addresses, or follower graphs. Only aggregate age brackets, gender, and general regions to surface demographic patterns.
         </p>
       </div>
 
@@ -63,9 +63,9 @@ import { SITE_DESCRIPTION } from '../config';
       <div class="md:col-span-2 lg:col-start-3 lg:row-start-2 glass-panel p-8 flex flex-col sm:flex-row items-center gap-8 reveal-on-scroll min-h-[280px] lg:min-h-0" style="transition-delay: 300ms;">
         <div class="flex-grow">
           <div class="w-12 h-12 bg-slate-200 dark:bg-slate-800 text-black dark:text-white border border-slate-300 dark:border-white/10 rounded-2xl flex items-center justify-center mb-6" set:html={`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`} />
-          <h3 class="text-2xl font-display font-bold text-black dark:text-white mb-3">Reciprocal Engine: Give to Ask</h3>
+          <h3 class="text-2xl font-display font-bold text-black dark:text-white mb-3">Give to Ask</h3>
           <p class="text-black dark:text-white leading-relaxed text-sm sm:text-base font-sans">
-            Every time you answer community questions, you earn participation credits. Those credits grant you the right to post your own questions and boost them across feeds. Millions of answers, zero spam, and authentic signal on topics that truly matter.
+            Answer questions to earn participation credits, then spend credits to ask your own or expand their reach. A balanced loop that keeps engagement intentional and noise low.
           </p>
         </div>
       </div>

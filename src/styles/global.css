@@ -59,12 +59,14 @@
     --bg-color: #e6ecf2;
     --text-color: #000000;
     --border-color: #cbd5e1;
+    color-scheme: light;
   }
   
   .dark {
     --bg-color: #09090b; /* True deep black/slate */
     --text-color: #ffffff;
     --border-color: #1e293b;
+    color-scheme: dark;
   }
 
   html {
@@ -118,21 +120,6 @@
   .font-tektur,
   .font-sans {
     letter-spacing: 0.05em;
-  }
-
-  /* Custom Scrollbar for a premium feel */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #94a3b8;
-    border-radius: 5px;
-  }
-  .dark ::-webkit-scrollbar-thumb {
-    background: #334155;
   }
 }
 
