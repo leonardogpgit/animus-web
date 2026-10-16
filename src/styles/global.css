@@ -75,7 +75,7 @@
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-sans);
-    letter-spacing: 0.025em;
+    letter-spacing: 0.05em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -112,6 +112,12 @@
 
   p, li, a, input, textarea, select, label {
     font-family: var(--font-sans);
+    letter-spacing: 0.05em;
+  }
+
+  .font-tektur,
+  .font-sans {
+    letter-spacing: 0.05em;
   }
 
   /* Custom Scrollbar for a premium feel */
