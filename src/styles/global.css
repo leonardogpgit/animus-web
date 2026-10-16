@@ -81,8 +81,18 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
+  h1, h2, h3, h4, h5, h6,
+  h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+  .main-hero-title, .main-hero-title *,
+  .font-descscor, .font-descscor *,
+  .font-orbitron, .font-orbitron *,
+  .font-heading, .font-heading *,
+  .font-display, .font-display *,
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    font-family: var(--font-display) !important;
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
     font-weight: 700;
     letter-spacing: 0.02em;
     color: var(--text-color);
@@ -90,10 +100,6 @@
 
   nav, button {
     font-family: var(--font-display);
-  }
-
-  .main-hero-title, .font-descscor, .font-orbitron, .font-heading {
-    font-family: var(--font-display) !important;
   }
 
   .font-descmenu {
@@ -104,7 +110,7 @@
     font-family: var(--font-sans) !important;
   }
 
-  p, li, span, a, input, textarea, select, label {
+  p, li, a, input, textarea, select, label {
     font-family: var(--font-sans);
   }
 
