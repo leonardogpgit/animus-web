@@ -21,7 +21,7 @@ const testimonials = [
 ];
 ---
 
-<section id="testimonials" class="pt-16 pb-8 md:pt-24 md:pb-12 bg-[#dfe6ee] dark:bg-[#09090b] border-t border-slate-300 dark:border-slate-800 relative overflow-hidden">
+<section id="testimonials" class="pt-16 pb-8 md:pt-24 md:pb-12 bg-[#e6ecf2] dark:bg-[#09090b] border-t border-slate-300 dark:border-slate-800 relative overflow-hidden">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center max-w-3xl mx-auto mb-20 reveal-on-scroll">
       <h2 class="text-4xl md:text-5xl font-heading font-extrabold text-black dark:text-white mb-6">Real voices. <span class="text-black/80 dark:text-white/80 font-heading">Zero noise.</span></h2>
@@ -34,14 +34,14 @@ const testimonials = [
       {testimonials.map((t, index) => (
         <div class="glass-panel p-8 flex flex-col h-full reveal-on-scroll relative group" style={`transition-delay: ${index * 100}ms;`}>
           <!-- Decorative quotation mark -->
-          <div class="absolute top-6 right-6 text-6xl text-slate-300 dark:text-slate-800/50 font-serif leading-none select-none">"</div>
+          <div class="absolute top-6 right-6 text-6xl text-slate-300 dark:text-white/20 font-serif leading-none select-none">"</div>
           
           <blockquote class="text-black dark:text-white text-base sm:text-lg mb-8 flex-grow relative z-10 font-medium leading-relaxed font-sans">
             "{t.quote}"
           </blockquote>
           
           <div class="flex items-center gap-4 relative z-10">
-            <div class="w-11 h-11 rounded-full bg-slate-200 dark:bg-slate-800 text-black dark:text-white border border-slate-300 dark:border-white/10 font-bold flex items-center justify-center font-display text-sm">
+            <div class="w-11 h-11 rounded-full bg-slate-200 dark:bg-white/10 text-black dark:text-white border border-slate-300 dark:border-white/10 font-bold flex items-center justify-center font-display text-sm">
               {t.author.charAt(0)}
             </div>
             <div>

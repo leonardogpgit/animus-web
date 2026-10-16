@@ -6,7 +6,7 @@ import { resolvePath } from '../utils/navigation';
 ---
 
 <BaseLayout title="Sign in" description="Preview the Animus demo sign in form.">
-  <section class="min-h-[calc(100vh-4rem)] bg-slate-50 py-16 transition-colors dark:bg-[#09090b] md:py-24">
+  <section class="min-h-[calc(100vh-4rem)] bg-[#e6ecf2] py-16 transition-colors dark:bg-[#09090b] md:py-24">
     <div class="container mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_460px] lg:px-8">
       <div class="max-w-2xl">
         <p class="mb-4 text-sm font-bold uppercase tracking-widest text-black/70 dark:text-white/70 font-display">Demo auth screen</p>
@@ -23,22 +23,22 @@ import { resolvePath } from '../utils/navigation';
       </div>
 
       <div class="glass-panel rounded-2xl p-6 shadow-xl shadow-slate-900/5 dark:shadow-black/20 sm:p-8">
-        <div class="mb-6 rounded-xl border border-slate-300 bg-[#f4f7fb] px-4 py-3 text-sm text-black dark:border-white/10 dark:bg-slate-900 dark:text-white font-sans">
+        <div class="mb-6 rounded-xl border border-slate-300 bg-[#f4f7fb] px-4 py-3 text-sm text-black dark:border-white/10 dark:bg-white/5 dark:text-white font-sans">
           Demo only. This form does not create a session or send credentials.
         </div>
         <h2 class="mb-6 font-heading text-2xl font-bold text-black dark:text-white">Sign in</h2>
         <form class="space-y-5" action={REPOSITORY_URL} method="get">
           <div>
             <label for="email" class="mb-2 block text-sm font-medium text-black dark:text-white font-sans">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" class="w-full rounded-xl border border-slate-300 bg-[#f4f7fb] px-4 py-3 text-black font-sans outline-none transition-colors placeholder:text-neutral-500 focus:border-black focus:ring-2 focus:ring-black/10 dark:border-white/20 dark:bg-slate-900/80 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-white" placeholder="demo@animus.dev" />
+            <input id="email" name="email" type="email" autocomplete="email" class="w-full rounded-xl border border-slate-300 bg-[#f4f7fb] px-4 py-3 text-black font-sans outline-none transition-colors placeholder:text-neutral-500 focus:border-black focus:ring-2 focus:ring-black/10 dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-white" placeholder="demo@animus.dev" />
           </div>
           <div>
             <label for="password" class="mb-2 block text-sm font-medium text-black dark:text-white font-sans">Password</label>
-            <input id="password" name="password" type="password" autocomplete="current-password" class="w-full rounded-xl border border-slate-300 bg-[#f4f7fb] px-4 py-3 text-black font-sans outline-none transition-colors placeholder:text-neutral-500 focus:border-black focus:ring-2 focus:ring-black/10 dark:border-white/20 dark:bg-slate-900/80 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-white" placeholder="Demo password" />
+            <input id="password" name="password" type="password" autocomplete="current-password" class="w-full rounded-xl border border-slate-300 bg-[#f4f7fb] px-4 py-3 text-black font-sans outline-none transition-colors placeholder:text-neutral-500 focus:border-black focus:ring-2 focus:ring-black/10 dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-neutral-400 dark:focus:border-white" placeholder="Demo password" />
           </div>
           <div class="flex items-center justify-between text-sm font-sans">
             <label class="inline-flex items-center gap-2 text-black dark:text-white">
-              <input type="checkbox" class="h-4 w-4 rounded border-slate-300 text-black focus:ring-black dark:border-slate-700 dark:bg-slate-900" />
+              <input type="checkbox" class="h-4 w-4 rounded border-slate-300 text-black focus:ring-black dark:border-white/20 dark:bg-white/5" />
               Remember me
             </label>
             <a href={resolvePath('/signup/')} class="font-medium text-black dark:text-white underline hover:opacity-75">Create account</a>

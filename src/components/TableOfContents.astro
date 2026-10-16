@@ -13,13 +13,13 @@ const toc = headings.filter((heading) => heading.depth > 1 && heading.depth < 4)
 
 {toc.length > 0 && (
   <nav class="sticky top-24 self-start hidden lg:block max-w-xs">
-    <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white uppercase tracking-wider mb-4">On this page</h3>
-    <ul class="space-y-2 text-sm border-l-2 border-slate-200 dark:border-slate-800">
+    <h3 class="text-sm font-bold font-heading text-black dark:text-white uppercase tracking-wider mb-4">On this page</h3>
+    <ul class="space-y-2 text-sm border-l-2 border-slate-300 dark:border-white/10">
       {toc.map((heading) => (
         <li>
           <a
             href={`#${heading.slug}`}
-            class={`block py-1 pl-4 -ml-[2px] border-l-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors
+            class={`block py-1 pl-4 -ml-[2px] border-l-2 border-transparent text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors font-sans
               ${heading.depth === 3 ? 'ml-2 text-xs' : ''}
             `}
             data-toc-link
@@ -46,12 +46,12 @@ const toc = headings.filter((heading) => heading.depth > 1 && heading.depth < 4)
           if (entry.isIntersecting) {
             // Remove active class from all links
             document.querySelectorAll('nav a[data-toc-link]').forEach((a) => {
-              a.classList.remove('border-primary-500', 'text-primary-600', 'dark:text-primary-400');
+              a.classList.remove('border-black', 'dark:border-white', 'text-black', 'dark:text-white', 'font-semibold');
               a.classList.add('border-transparent');
             });
             // Add active class to current intersecting link
             link.classList.remove('border-transparent');
-            link.classList.add('border-primary-500', 'text-primary-600', 'dark:text-primary-400');
+            link.classList.add('border-black', 'dark:border-white', 'text-black', 'dark:text-white', 'font-semibold');
           }
         });
       },
