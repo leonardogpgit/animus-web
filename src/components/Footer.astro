@@ -4,9 +4,9 @@ import { resolvePath } from '../utils/navigation';
 ---
 
 <footer class="metal-slab-bar w-full transition-colors">
-  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-5 pb-3.5 md:pt-6 md:pb-4">
+  <div class="mx-auto max-w-6xl px-4 pt-6 pb-4 sm:px-6 md:pt-8 md:pb-5 lg:px-8">
     <!-- Social Icons (dedicated line above legal) -->
-    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-2.5 md:mb-3">
+    <div class="mb-3 flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:mb-4">
       {SOCIAL_LINKS.map(item => (
         <a
           href={item.url}
@@ -27,7 +27,7 @@ import { resolvePath } from '../utils/navigation';
     <!-- Legal Links -->
     <div class="flex items-center justify-center gap-6">
       {FOOTER_LINKS.flatMap(group => group.links).map(link => (
-        <a href={resolvePath(link.href)} class="text-xs sm:text-sm font-medium text-white/90 transition-opacity hover:opacity-100 dark:text-black/90 dark:hover:opacity-100">
+        <a href={resolvePath(link.href)} class="text-sm font-medium text-white/90 transition-opacity hover:opacity-100 dark:text-black/90 dark:hover:opacity-100">
           {link.label}
         </a>
       ))}
@@ -35,9 +35,9 @@ import { resolvePath } from '../utils/navigation';
   </div>
 
   <!-- Full-width divider & All rights reserved -->
-  <div class="w-full border-t border-white/15 dark:border-black/15 bg-black/10 dark:bg-black/5 py-3 md:py-3.5">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center">
-      <p class="text-center text-xs sm:text-sm font-medium text-white/90 dark:text-black/90">
+  <div class="w-full border-t border-white/15 dark:border-black/15 bg-black/10 dark:bg-black/5 py-4 md:py-5">
+    <div class="mx-auto flex max-w-6xl items-center justify-center px-4 text-center sm:px-6 lg:px-8">
+      <p class="text-center text-sm font-medium text-white/90 dark:text-black/90">
         &copy; {new Date().getFullYear()} Animus Project. All rights reserved.
       </p>
     </div>

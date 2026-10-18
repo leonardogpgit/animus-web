@@ -8,7 +8,7 @@ export const APP_URL = 'https://app.animusproject.org';
 export const REPOSITORY_URL = 'https://animusproject.org';
 
 // Brand Settings
-export const BRAND_NAME = 'Animus';
+export const BRAND_NAME = 'Animus Project';
 export const BRAND_LOGO_TEXT = 'A';
 
 // Social Links
