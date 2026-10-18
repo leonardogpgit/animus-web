@@ -14,31 +14,27 @@ export default function Hero() {
 				transition={{ duration: 0.6 }}
 				className="container mx-auto my-auto px-4 sm:px-6 lg:px-8 text-center"
 			>
-				<h1 className="text-3xl sm:text-6xl lg:text-7xl xl:text-8xl font-descscor font-extrabold tracking-tight text-black dark:text-white mb-6 sm:mb-8 max-w-5xl mx-auto leading-[1.12] sm:leading-[1.08]">
-					What do you think? <br />
-					<span className="text-gradient font-descscor">
-						The mind of humanity in real time.
-					</span>
+				<h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-descscor font-extrabold tracking-tight text-black dark:text-white mb-6 sm:mb-8 max-w-5xl mx-auto leading-tight">
+					What do you think?
 				</h1>
 
-				<p className="text-base sm:text-lg md:text-xl text-black dark:text-white mb-8 sm:mb-12 max-w-2xl mx-auto font-sans leading-relaxed">
-					An open, anonymous network for human consensus. Answer questions to
-					see demographic breakdowns, earn credits to ask your own, and explore
-					unfiltered perspectives.
-				</p>
+				<div className="mb-8 sm:mb-12 max-w-2xl mx-auto space-y-3">
+					<p className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-black/90 dark:text-white/90">
+						The mind of humanity in real time.
+					</p>
+					<p className="text-base sm:text-lg text-black/80 dark:text-white/80 font-sans leading-relaxed">
+						An open, anonymous network for human consensus. Answer questions to
+						see demographic breakdowns, earn credits to ask your own, and explore
+						unfiltered perspectives.
+					</p>
+				</div>
 
-				<div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
+				<div className="flex items-center justify-center">
 					<a
 						href="https://app.animusproject.org"
 						className="w-full sm:w-auto inline-flex items-center justify-center font-michroma text-base sm:text-lg px-8 py-4 rounded-xl bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 transition-colors shadow-xl shadow-black/10 font-bold"
 					>
 						Get the Mobile App
-					</a>
-					<a
-						href="#features"
-						className="w-full sm:w-auto inline-flex items-center justify-center font-michroma text-base sm:text-lg px-8 py-4 rounded-xl border border-slate-300 dark:border-white/10 bg-[#f4f7fb] dark:bg-slate-900/50 text-black dark:text-white hover:bg-slate-200/70 dark:hover:bg-white/10 transition-colors font-bold"
-					>
-						How It Works
 					</a>
 				</div>
 			</motion.div>

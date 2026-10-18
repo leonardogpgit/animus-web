@@ -64,7 +64,7 @@ export default function Features() {
 							</svg>
 						</div>
 						<h3 className="text-2xl sm:text-3xl font-display font-bold text-black dark:text-white mb-4 z-10">
-							The Consensus Graph
+							The Graph
 						</h3>
 						<p className="text-black dark:text-white text-base sm:text-lg leading-relaxed mb-8 flex-grow z-10 font-sans">
 							Built on a Neo4j graph database. When people ask similar
