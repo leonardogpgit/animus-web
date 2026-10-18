@@ -18,14 +18,11 @@ export default function Hero() {
 					What do you think?
 				</h1>
 
-				<div className="mb-8 sm:mb-12 max-w-2xl mx-auto space-y-3">
-					<p className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-black/90 dark:text-white/90">
-						The mind of humanity in real time.
-					</p>
+				<div className="mb-8 sm:mb-12 max-w-2xl mx-auto">
 					<p className="text-base sm:text-lg text-black/80 dark:text-white/80 font-sans leading-relaxed">
-						An open, anonymous network for human consensus. Answer questions to
-						see demographic breakdowns, earn credits to ask your own, and explore
-						unfiltered perspectives.
+						The mind of humanity in real time. An open, anonymous network for
+						human consensus. Answer questions to see demographic breakdowns, earn
+						credits to ask your own, and explore unfiltered perspectives.
 					</p>
 				</div>
 
