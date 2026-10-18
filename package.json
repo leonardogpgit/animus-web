@@ -1,48 +1,34 @@
 {
-  "name": "zenix",
-  "description": "A high-performance Astro 6 SaaS theme by Farros FR. 100/100 Lighthouse optimized with dark mode, MDX blog, changelog, and search.",
-  "type": "module",
-  "version": "0.0.1",
-  "license": "MIT",
-  "homepage": "https://zenix.farrosfr.com/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/farrosfr/zenix.git"
-  },
-  "bugs": {
-    "url": "https://github.com/farrosfr/zenix/issues"
-  },
-  "keywords": [
-    "astro",
-    "astro-theme",
-    "tailwindcss",
-    "saas",
-    "landing-page",
-    "blog",
-    "mdx"
-  ],
-  "engines": {
-    "node": ">=22.12.0"
-  },
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^5.0.6",
-    "@fontsource-variable/inter": "^5.2.8",
-    "@fontsource-variable/space-grotesk": "^5.2.10",
-    "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.3.3",
-    "sharp": "^0.34.5",
-    "tailwindcss": "^4.3.0"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.60.0",
-    "@tailwindcss/typography": "^0.5.19"
-  }
+	"name": "animus-web",
+	"version": "2026.3.0",
+	"private": true,
+	"description": "Animus Project - The mind of humanity in real time",
+	"license": "MIT",
+	"packageManager": "pnpm@11.8.0",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build && rm -rf dist && cp -r out dist",
+		"start": "next start",
+		"lint": "biome check --write ."
+	},
+	"dependencies": {
+		"@tailwindcss/typography": "^0.5.20",
+		"firebase": "^13.0.0",
+		"framer-motion": "^12.43.0",
+		"marked": "^18.0.7",
+		"next": "^16.3.0",
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8",
+		"react-icons": "^5.7.0",
+		"tailwindcss": "^4.3.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.7",
+		"@tailwindcss/postcss": "^4.3.3",
+		"@types/node": "^26.1.2",
+		"@types/react": "^19.2.18",
+		"@types/react-dom": "^19.2.4",
+		"postcss": "^8.5.25",
+		"typescript": "7.0.2"
+	}
 }
