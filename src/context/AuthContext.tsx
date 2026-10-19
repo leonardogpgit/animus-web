@@ -21,7 +21,6 @@ import { auth, googleProvider } from "@/lib/firebase";
 import {
 	clearSharedSession,
 	getSharedSession,
-	isLoggedOut,
 	setSharedSession,
 	type SharedSessionData,
 } from "@/lib/cookieAuth";
@@ -29,9 +28,9 @@ import {
 interface AuthContextType {
 	user: User | null;
 	loading: boolean;
-	signInWithGoogle: () => Promise<void>;
-	signInWithEmail: (email: string, pass: string) => Promise<void>;
-	signUpWithEmail: (email: string, pass: string) => Promise<void>;
+	signInWithGoogle: () => Promise<SharedSessionData>;
+	signInWithEmail: (email: string, pass: string) => Promise<SharedSessionData>;
+	signUpWithEmail: (email: string, pass: string) => Promise<SharedSessionData>;
 	logout: () => Promise<void>;
 	getIdToken: () => Promise<string | null>;
 }
@@ -39,9 +38,15 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType>({
 	user: null,
 	loading: true,
-	signInWithGoogle: async () => {},
-	signInWithEmail: async () => {},
-	signUpWithEmail: async () => {},
+	signInWithGoogle: async () => {
+		throw new Error("AuthProvider not mounted");
+	},
+	signInWithEmail: async () => {
+		throw new Error("AuthProvider not mounted");
+	},
+	signUpWithEmail: async () => {
+		throw new Error("AuthProvider not mounted");
+	},
 	logout: async () => {},
 	getIdToken: async () => null,
 });
@@ -65,24 +70,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		// If globally logged out, ensure clean state
-		if (isLoggedOut()) {
-			clearSharedSession();
-			setUser(null);
-			setLoading(false);
-			firebaseSignOut(auth).catch(() => {});
-			return;
-		}
-
 		// Eagerly hydrate from shared session
 		const initialSession = getSharedSession();
 		if (initialSession) {
 			setUser(createSyntheticUser(initialSession));
 			setLoading(false);
+		} else {
+			setUser(null);
+			setLoading(false);
 		}
 
 		const unsubAuth = onAuthStateChanged(auth, async (currentUser) => {
-			if (isLoggedOut()) {
+			const session = getSharedSession();
+
+			if (!session) {
+				// No active shared session exists in ecosystem
 				if (currentUser) {
 					await firebaseSignOut(auth).catch(() => {});
 				}
@@ -92,49 +94,50 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 			}
 
 			if (currentUser) {
-				setUser(currentUser);
-				setLoading(false);
-				try {
-					const token = await currentUser.getIdToken();
-					setSharedSession({
-						uid: currentUser.uid,
-						email: currentUser.email,
-						displayName: currentUser.displayName,
-						photoURL: currentUser.photoURL,
-						token,
-						updatedAt: Date.now(),
-					});
-				} catch (err) {
-					console.error("Failed to sync ID token to shared session:", err);
+				if (currentUser.uid === session.uid) {
+					setUser(currentUser);
+					setLoading(false);
+					try {
+						const token = await currentUser.getIdToken();
+						setSharedSession({
+							uid: currentUser.uid,
+							email: currentUser.email,
+							displayName: currentUser.displayName,
+							photoURL: currentUser.photoURL,
+							token,
+							updatedAt: Date.now(),
+						});
+					} catch (err) {
+						console.error("Failed to sync ID token to shared session:", err);
+					}
+				} else {
+					// User in IndexedDB differs from active shared session
+					await firebaseSignOut(auth).catch(() => {});
+					setUser(createSyntheticUser(session));
+					setLoading(false);
 				}
 			} else {
-				const cookieSession = getSharedSession();
-				if (cookieSession) {
-					setUser((prev) =>
-						prev && prev.uid === cookieSession.uid
-							? prev
-							: createSyntheticUser(cookieSession),
-					);
-				} else {
-					setUser(null);
-				}
+				setUser(createSyntheticUser(session));
 				setLoading(false);
 			}
 		});
 
 		const unsubToken = onIdTokenChanged(auth, async (currentUser) => {
-			if (currentUser && !isLoggedOut()) {
-				try {
-					const token = await currentUser.getIdToken();
-					setSharedSession({
-						uid: currentUser.uid,
-						email: currentUser.email,
-						displayName: currentUser.displayName,
-						photoURL: currentUser.photoURL,
-						token,
-						updatedAt: Date.now(),
-					});
-				} catch {}
+			if (currentUser) {
+				const session = getSharedSession();
+				if (session && session.uid === currentUser.uid) {
+					try {
+						const token = await currentUser.getIdToken();
+						setSharedSession({
+							uid: currentUser.uid,
+							email: currentUser.email,
+							displayName: currentUser.displayName,
+							photoURL: currentUser.photoURL,
+							token,
+							updatedAt: Date.now(),
+						});
+					} catch {}
+				}
 			}
 		});
 
@@ -147,18 +150,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 	// Active cross-tab / cross-subdomain session synchronization
 	useEffect(() => {
 		const syncState = () => {
-			if (isLoggedOut()) {
+			const session = getSharedSession();
+			if (!session) {
 				if (user !== null) {
 					setUser(null);
 					firebaseSignOut(auth).catch(() => {});
-				}
-				return;
-			}
-
-			const session = getSharedSession();
-			if (!session) {
-				if (user !== null && !auth.currentUser) {
-					setUser(null);
 				}
 			} else {
 				if (!user || user.uid !== session.uid) {
@@ -186,63 +182,72 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 		};
 	}, [user]);
 
-	const signInWithGoogle = async () => {
+	const signInWithGoogle = async (): Promise<SharedSessionData> => {
 		try {
 			const cred = await signInWithPopup(auth, googleProvider);
 			if (cred?.user) {
 				const token = await cred.user.getIdToken();
-				setSharedSession({
+				const sessionData: SharedSessionData = {
 					uid: cred.user.uid,
 					email: cred.user.email,
 					displayName: cred.user.displayName,
 					photoURL: cred.user.photoURL,
 					token,
 					updatedAt: Date.now(),
-				});
+				};
+				setSharedSession(sessionData);
 				setUser(cred.user);
+				return sessionData;
 			}
+			throw new Error("No user credential returned from Google sign-in");
 		} catch (error) {
 			console.error("Google sign-in error:", error);
 			throw error;
 		}
 	};
 
-	const signInWithEmail = async (email: string, pass: string) => {
+	const signInWithEmail = async (email: string, pass: string): Promise<SharedSessionData> => {
 		try {
 			const cred = await signInWithEmailAndPassword(auth, email, pass);
 			if (cred?.user) {
 				const token = await cred.user.getIdToken();
-				setSharedSession({
+				const sessionData: SharedSessionData = {
 					uid: cred.user.uid,
 					email: cred.user.email,
 					displayName: cred.user.displayName,
 					photoURL: cred.user.photoURL,
 					token,
 					updatedAt: Date.now(),
-				});
+				};
+				setSharedSession(sessionData);
 				setUser(cred.user);
+				return sessionData;
 			}
+			throw new Error("No user credential returned from email sign-in");
 		} catch (error) {
 			console.error("Email sign-in error:", error);
 			throw error;
 		}
 	};
 
-	const signUpWithEmail = async (email: string, pass: string) => {
+	const signUpWithEmail = async (email: string, pass: string): Promise<SharedSessionData> => {
 		try {
 			const cred = await createUserWithEmailAndPassword(auth, email, pass);
 			if (cred?.user) {
 				const token = await cred.user.getIdToken();
-				setSharedSession({
+				const sessionData: SharedSessionData = {
 					uid: cred.user.uid,
 					email: cred.user.email,
 					displayName: cred.user.displayName,
 					photoURL: cred.user.photoURL,
 					token,
 					updatedAt: Date.now(),
-				});
+				};
+				setSharedSession(sessionData);
 				setUser(cred.user);
+				return sessionData;
 			}
+			throw new Error("No user credential returned from email sign-up");
 		} catch (error) {
 			console.error("Email sign-up error:", error);
 			throw error;

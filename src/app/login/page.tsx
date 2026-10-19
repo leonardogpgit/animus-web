@@ -7,6 +7,7 @@ import {
 	getSafeRedirectUrl,
 	buildRedirectWithSession,
 	setSharedSession,
+	getSharedSession,
 } from "@/lib/cookieAuth";
 import { FcGoogle } from "react-icons/fc";
 
@@ -52,33 +53,14 @@ function LoginForm() {
 		}
 	}, [user, safeRedirect]);
 
-	const handlePostLogin = async () => {
-		if (user) {
-			try {
-				const token = await user.getIdToken();
-				const sessionData = {
-					uid: user.uid,
-					email: user.email,
-					displayName: user.displayName,
-					photoURL: user.photoURL,
-					token,
-					updatedAt: Date.now(),
-				};
-				setSharedSession(sessionData);
-				if (safeRedirect) {
-					window.location.href = buildRedirectWithSession(
-						safeRedirect,
-						sessionData,
-					);
-					return;
-				}
-			} catch {}
-		}
-
-		if (safeRedirect) {
-			window.location.href = safeRedirect;
+	const handlePostLogin = (sessionData?: any) => {
+		const session = sessionData || getSharedSession();
+		const target = safeRedirect || "https://app.animusproject.org/app/graph";
+		if (session) {
+			setSharedSession(session);
+			window.location.href = buildRedirectWithSession(target, session);
 		} else {
-			window.location.href = "https://app.animusproject.org/app/graph";
+			window.location.href = target;
 		}
 	};
 
@@ -188,13 +170,12 @@ function LoginForm() {
 		try {
 			setError(null);
 			setIsSubmitting(true);
-			await signInWithGoogle();
-			await handlePostLogin();
+			const session = await signInWithGoogle();
+			handlePostLogin(session);
 		} catch (err: unknown) {
 			const message =
 				err instanceof Error ? err.message : "Failed to sign in with Google";
 			setError(message);
-		} finally {
 			setIsSubmitting(false);
 		}
 	};
@@ -209,17 +190,14 @@ function LoginForm() {
 		try {
 			setError(null);
 			setIsSubmitting(true);
-			if (isSignUp) {
-				await signUpWithEmail(email, password);
-			} else {
-				await signInWithEmail(email, password);
-			}
-			await handlePostLogin();
+			const session = isSignUp
+				? await signUpWithEmail(email, password)
+				: await signInWithEmail(email, password);
+			handlePostLogin(session);
 		} catch (err: unknown) {
 			const message =
 				err instanceof Error ? err.message : "Authentication failed";
 			setError(message);
-		} finally {
 			setIsSubmitting(false);
 		}
 	};
