@@ -1,9 +1,13 @@
 "use client";
 
-import { Suspense, useState, useEffect } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
-import { getSafeRedirectUrl } from "@/lib/cookieAuth";
+import {
+	getSafeRedirectUrl,
+	buildRedirectWithSession,
+	setSharedSession,
+} from "@/lib/cookieAuth";
 import { FcGoogle } from "react-icons/fc";
 
 function LoginForm() {
@@ -20,12 +24,63 @@ function LoginForm() {
 	const [password, setPassword] = useState("");
 	const [error, setError] = useState<string | null>(null);
 	const [isSubmitting, setIsSubmitting] = useState(false);
+	const hasRedirectedRef = useRef(false);
 
 	useEffect(() => {
-		if (user && safeRedirect) {
-			window.location.href = safeRedirect;
+		if (user && safeRedirect && !hasRedirectedRef.current) {
+			hasRedirectedRef.current = true;
+			user
+				.getIdToken()
+				.then((token) => {
+					const sessionData = {
+						uid: user.uid,
+						email: user.email,
+						displayName: user.displayName,
+						photoURL: user.photoURL,
+						token,
+						updatedAt: Date.now(),
+					};
+					setSharedSession(sessionData);
+					window.location.href = buildRedirectWithSession(
+						safeRedirect,
+						sessionData,
+					);
+				})
+				.catch(() => {
+					window.location.href = safeRedirect;
+				});
 		}
 	}, [user, safeRedirect]);
+
+	const handlePostLogin = async () => {
+		if (user) {
+			try {
+				const token = await user.getIdToken();
+				const sessionData = {
+					uid: user.uid,
+					email: user.email,
+					displayName: user.displayName,
+					photoURL: user.photoURL,
+					token,
+					updatedAt: Date.now(),
+				};
+				setSharedSession(sessionData);
+				if (safeRedirect) {
+					window.location.href = buildRedirectWithSession(
+						safeRedirect,
+						sessionData,
+					);
+					return;
+				}
+			} catch {}
+		}
+
+		if (safeRedirect) {
+			window.location.href = safeRedirect;
+		} else {
+			window.location.href = "https://app.animusproject.org/app/graph";
+		}
+	};
 
 	if (user) {
 		return (
@@ -50,10 +105,8 @@ function LoginForm() {
 						{safeRedirect ? (
 							<button
 								type="button"
-								onClick={() => {
-									window.location.href = safeRedirect;
-								}}
-								className="w-full rounded-xl bg-black px-4 py-3 text-sm font-medium font-michroma text-white hover:opacity-90 dark:bg-white dark:text-black transition-opacity"
+								onClick={handlePostLogin}
+								className="w-full rounded-xl bg-black px-4 py-3 text-sm font-medium font-michroma text-white hover:opacity-90 dark:bg-white dark:text-black transition-opacity cursor-pointer"
 							>
 								Continue to Requested Page
 							</button>
@@ -83,7 +136,7 @@ function LoginForm() {
 						<button
 							type="button"
 							onClick={() => logout()}
-							className="w-full rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium font-michroma text-red-600 dark:text-red-400 hover:bg-red-500/20 transition-colors mt-2"
+							className="w-full rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium font-michroma text-red-600 dark:text-red-400 hover:bg-red-500/20 transition-colors mt-2 cursor-pointer"
 						>
 							Sign Out
 						</button>
@@ -93,20 +146,12 @@ function LoginForm() {
 		);
 	}
 
-	const handlePostLogin = () => {
-		if (safeRedirect) {
-			window.location.href = safeRedirect;
-		} else {
-			window.location.href = "https://app.animusproject.org/app/graph";
-		}
-	};
-
 	const handleGoogleSignIn = async () => {
 		try {
 			setError(null);
 			setIsSubmitting(true);
 			await signInWithGoogle();
-			handlePostLogin();
+			await handlePostLogin();
 		} catch (err: unknown) {
 			const message =
 				err instanceof Error ? err.message : "Failed to sign in with Google";
@@ -131,7 +176,7 @@ function LoginForm() {
 			} else {
 				await signInWithEmail(email, password);
 			}
-			handlePostLogin();
+			await handlePostLogin();
 		} catch (err: unknown) {
 			const message =
 				err instanceof Error ? err.message : "Authentication failed";
@@ -163,7 +208,7 @@ function LoginForm() {
 					type="button"
 					onClick={handleGoogleSignIn}
 					disabled={isSubmitting}
-					className="flex w-full items-center justify-center gap-3 rounded-xl border border-slate-300 dark:border-white/10 bg-[#f4f7fb] dark:bg-white/5 px-4 py-3 text-sm font-medium font-michroma text-black dark:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-colors disabled:opacity-50"
+					className="flex w-full items-center justify-center gap-3 rounded-xl border border-slate-300 dark:border-white/10 bg-[#f4f7fb] dark:bg-white/5 px-4 py-3 text-sm font-medium font-michroma text-black dark:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-colors disabled:opacity-50 cursor-pointer"
 				>
 					<FcGoogle className="h-5 w-5 shrink-0" />
 					<span>Continue with Google</span>
@@ -216,7 +261,7 @@ function LoginForm() {
 					<button
 						type="submit"
 						disabled={isSubmitting}
-						className="w-full rounded-xl bg-black px-4 py-3 text-sm font-medium font-michroma text-white hover:opacity-90 dark:bg-white dark:text-black transition-opacity disabled:opacity-50 mt-2"
+						className="w-full rounded-xl bg-black px-4 py-3 text-sm font-medium font-michroma text-white hover:opacity-90 dark:bg-white dark:text-black transition-opacity disabled:opacity-50 mt-2 cursor-pointer"
 					>
 						{isSubmitting
 							? "Processing..."
@@ -230,7 +275,7 @@ function LoginForm() {
 					<button
 						type="button"
 						onClick={() => setIsSignUp(!isSignUp)}
-						className="text-xs text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white underline transition-colors"
+						className="text-xs text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white underline transition-colors cursor-pointer"
 					>
 						{isSignUp
 							? "Already have an account? Sign In"
