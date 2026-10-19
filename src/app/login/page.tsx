@@ -82,6 +82,29 @@ function LoginForm() {
 		}
 	};
 
+	const handleNavigateWithSession = async (targetUrl: string) => {
+		if (user) {
+			try {
+				const token = await user.getIdToken();
+				const sessionData = {
+					uid: user.uid,
+					email: user.email,
+					displayName: user.displayName,
+					photoURL: user.photoURL,
+					token,
+					updatedAt: Date.now(),
+				};
+				setSharedSession(sessionData);
+				window.location.href = buildRedirectWithSession(
+					targetUrl,
+					sessionData,
+				);
+				return;
+			} catch {}
+		}
+		window.location.href = targetUrl;
+	};
+
 	if (user) {
 		return (
 			<section className="py-20 md:py-28 flex items-center justify-center px-4">
@@ -112,24 +135,39 @@ function LoginForm() {
 							</button>
 						) : (
 							<>
-								<a
-									href="https://app.animusproject.org/app/graph"
-									className="w-full rounded-xl bg-black px-4 py-3 text-sm font-medium font-michroma text-white hover:opacity-90 dark:bg-white dark:text-black transition-opacity text-center"
+								<button
+									type="button"
+									onClick={() =>
+										handleNavigateWithSession(
+											"https://app.animusproject.org/app/graph",
+										)
+									}
+									className="w-full rounded-xl bg-black px-4 py-3 text-sm font-medium font-michroma text-white hover:opacity-90 dark:bg-white dark:text-black transition-opacity text-center cursor-pointer"
 								>
 									Open App (Graph)
-								</a>
-								<a
-									href="https://imago.animusproject.org/app/graph"
-									className="w-full rounded-xl border border-slate-300 dark:border-white/15 bg-white/70 dark:bg-white/5 px-4 py-3 text-sm font-medium font-michroma text-black dark:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-colors text-center"
+								</button>
+								<button
+									type="button"
+									onClick={() =>
+										handleNavigateWithSession(
+											"https://imago.animusproject.org/app/graph",
+										)
+									}
+									className="w-full rounded-xl border border-slate-300 dark:border-white/15 bg-white/70 dark:bg-white/5 px-4 py-3 text-sm font-medium font-michroma text-black dark:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-colors text-center cursor-pointer"
 								>
 									Open Imago
-								</a>
-								<a
-									href="https://app.animusproject.org/app/profile"
-									className="w-full rounded-xl border border-slate-300 dark:border-white/10 bg-[#f4f7fb] dark:bg-white/5 px-4 py-3 text-sm font-medium font-michroma text-black dark:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-colors text-center"
+								</button>
+								<button
+									type="button"
+									onClick={() =>
+										handleNavigateWithSession(
+											"https://app.animusproject.org/app/profile",
+										)
+									}
+									className="w-full rounded-xl border border-slate-300 dark:border-white/10 bg-[#f4f7fb] dark:bg-white/5 px-4 py-3 text-sm font-medium font-michroma text-black dark:text-white hover:bg-slate-200/60 dark:hover:bg-white/10 transition-colors text-center cursor-pointer"
 								>
 									User Profile
-								</a>
+								</button>
 							</>
 						)}
 

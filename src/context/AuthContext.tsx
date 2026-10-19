@@ -12,6 +12,7 @@ import {
 import {
 	createContext,
 	type ReactNode,
+	useCallback,
 	useContext,
 	useEffect,
 	useState,
@@ -20,6 +21,7 @@ import { auth, googleProvider } from "@/lib/firebase";
 import {
 	clearSharedSession,
 	getSharedSession,
+	isLoggedOut,
 	setSharedSession,
 	type SharedSessionData,
 } from "@/lib/cookieAuth";
@@ -63,15 +65,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		// Eagerly hydrate from shared session cookie if present
+		// If globally logged out, ensure clean state
+		if (isLoggedOut()) {
+			clearSharedSession();
+			setUser(null);
+			setLoading(false);
+			firebaseSignOut(auth).catch(() => {});
+			return;
+		}
+
+		// Eagerly hydrate from shared session
 		const initialSession = getSharedSession();
 		if (initialSession) {
 			setUser(createSyntheticUser(initialSession));
 			setLoading(false);
 		}
 
-		// Listen to token changes and auth state
-		const syncToken = async (currentUser: User | null) => {
+		const unsubAuth = onAuthStateChanged(auth, async (currentUser) => {
+			if (isLoggedOut()) {
+				if (currentUser) {
+					await firebaseSignOut(auth).catch(() => {});
+				}
+				setUser(null);
+				setLoading(false);
+				return;
+			}
+
 			if (currentUser) {
 				setUser(currentUser);
 				setLoading(false);
@@ -91,22 +110,81 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 			} else {
 				const cookieSession = getSharedSession();
 				if (cookieSession) {
-					setUser(createSyntheticUser(cookieSession));
+					setUser((prev) =>
+						prev && prev.uid === cookieSession.uid
+							? prev
+							: createSyntheticUser(cookieSession),
+					);
 				} else {
 					setUser(null);
 				}
 				setLoading(false);
 			}
-		};
+		});
 
-		const unsubAuth = onAuthStateChanged(auth, syncToken);
-		const unsubToken = onIdTokenChanged(auth, syncToken);
+		const unsubToken = onIdTokenChanged(auth, async (currentUser) => {
+			if (currentUser && !isLoggedOut()) {
+				try {
+					const token = await currentUser.getIdToken();
+					setSharedSession({
+						uid: currentUser.uid,
+						email: currentUser.email,
+						displayName: currentUser.displayName,
+						photoURL: currentUser.photoURL,
+						token,
+						updatedAt: Date.now(),
+					});
+				} catch {}
+			}
+		});
 
 		return () => {
 			unsubAuth();
 			unsubToken();
 		};
 	}, []);
+
+	// Active cross-tab / cross-subdomain session synchronization
+	useEffect(() => {
+		const syncState = () => {
+			if (isLoggedOut()) {
+				if (user !== null) {
+					setUser(null);
+					firebaseSignOut(auth).catch(() => {});
+				}
+				return;
+			}
+
+			const session = getSharedSession();
+			if (!session) {
+				if (user !== null && !auth.currentUser) {
+					setUser(null);
+				}
+			} else {
+				if (!user || user.uid !== session.uid) {
+					setUser(createSyntheticUser(session));
+					setLoading(false);
+				}
+			}
+		};
+
+		const interval = setInterval(syncState, 1500);
+		const handleFocus = () => syncState();
+		const handleVisibility = () => {
+			if (typeof document !== "undefined" && document.visibilityState === "visible") {
+				syncState();
+			}
+		};
+
+		window.addEventListener("focus", handleFocus);
+		document.addEventListener("visibilitychange", handleVisibility);
+
+		return () => {
+			clearInterval(interval);
+			window.removeEventListener("focus", handleFocus);
+			document.removeEventListener("visibilitychange", handleVisibility);
+		};
+	}, [user]);
 
 	const signInWithGoogle = async () => {
 		try {
@@ -184,7 +262,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 		}
 	};
 
-	const getIdToken = async () => {
+	const getIdToken = useCallback(async () => {
 		if (auth.currentUser) {
 			const token = await auth.currentUser.getIdToken();
 			const session = getSharedSession();
@@ -195,7 +273,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 		}
 		const session = getSharedSession();
 		return session ? session.token : null;
-	};
+	}, []);
 
 	return (
 		<AuthContext.Provider
