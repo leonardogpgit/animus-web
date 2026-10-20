@@ -28,8 +28,9 @@ function LoginForm() {
 	const hasRedirectedRef = useRef(false);
 
 	useEffect(() => {
-		if (user && safeRedirect && !hasRedirectedRef.current) {
+		if (user && !hasRedirectedRef.current) {
 			hasRedirectedRef.current = true;
+			const target = safeRedirect || "https://app.animusproject.org/app/graph";
 			user
 				.getIdToken()
 				.then((token) => {
@@ -43,12 +44,12 @@ function LoginForm() {
 					};
 					setSharedSession(sessionData);
 					window.location.href = buildRedirectWithSession(
-						safeRedirect,
+						target,
 						sessionData,
 					);
 				})
 				.catch(() => {
-					window.location.href = safeRedirect;
+					window.location.href = target;
 				});
 		}
 	}, [user, safeRedirect]);
