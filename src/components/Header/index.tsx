@@ -60,7 +60,7 @@ export default function Header() {
 							</a>
 						) : (
 							<a
-								href="/login"
+								href="https://app.animusproject.org/login"
 								className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-white/25 dark:border-black/20 bg-white/10 dark:bg-black/10 text-xs font-bold font-michroma text-white dark:text-black hover:bg-white/20 dark:hover:bg-black/20 transition-colors shadow-xs"
 							>
 								Login
@@ -83,7 +83,7 @@ export default function Header() {
 					))}
 					{!user && (
 						<a
-							href="/login"
+							href="https://app.animusproject.org/login"
 							className="text-xs sm:text-sm font-bold font-michroma text-white dark:text-black underline underline-offset-4 transition-opacity hover:opacity-80"
 						>
 							Login
