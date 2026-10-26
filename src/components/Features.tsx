@@ -27,12 +27,10 @@ export default function Features() {
 						</span>
 					</h2>
 					<p className="text-lg sm:text-xl text-black dark:text-white font-medium font-sans mb-4">
-						An open, anonymous consensus network. 100% free, privacy-first, and
-						powered by reciprocity.
+						100% free, anonymous, and powered by reciprocity.
 					</p>
 					<p className="text-base sm:text-lg text-black dark:text-white font-sans">
-						A structured social network for the human mind, designed around
-						reciprocity, anonymity, and graph relationships.
+						No outrage algorithms, no herd mentality, and no noise. Just honest questions, real consensus, and fair reciprocity.
 					</p>
 				</motion.div>
 
@@ -67,9 +65,9 @@ export default function Features() {
 							The Graph
 						</h3>
 						<p className="text-black dark:text-white text-base sm:text-lg leading-relaxed mb-8 flex-grow z-10 font-sans">
-							Built on a Neo4j graph database. When people ask similar
-							questions, Animus merges them into shared knowledge nodes,
-							tracking demographic perspectives and trends over time.
+							Built on a graph database. When people ask similar questions,
+							Animus automatically merges them into a single question, keeping
+							answers together for clear, reliable statistics.
 						</p>
 
 						{/* Decorative Graph / Cypher Block */}
@@ -110,9 +108,8 @@ export default function Features() {
 							Answer to Unlock
 						</h3>
 						<p className="text-black dark:text-white leading-relaxed text-sm sm:text-base font-sans">
-							You must submit your own answer before viewing community
-							consensus. No herd behavior, no prior influence, and no visible
-							percentages beforehand.
+							You must commit your own answer before seeing community
+							results. No herd mentality, no bandwagon bias, and no peek ahead.
 						</p>
 					</motion.div>
 
@@ -141,9 +138,9 @@ export default function Features() {
 							Anonymous by Design
 						</h3>
 						<p className="text-black dark:text-white leading-relaxed text-sm sm:text-base font-sans">
-							No real names, phone numbers, email addresses, or follower graphs.
-							Only aggregate age brackets, gender, and general regions to
-							surface demographic patterns.
+							No names, phone numbers, email addresses, or follower counts.
+							Only broad demographic brackets (age, gender, general region) to
+							show genuine patterns across groups.
 						</p>
 					</motion.div>
 
@@ -172,9 +169,9 @@ export default function Features() {
 								Give to Ask
 							</h3>
 							<p className="text-black dark:text-white leading-relaxed text-sm sm:text-base font-sans">
-								Answer questions to earn participation credits, then spend
-								credits to ask your own or expand their reach. A balanced loop
-								that keeps engagement intentional and noise low.
+								Answer questions to earn credits, then spend credits to post
+								your own questions or boost their reach. A fair system that
+								prevents spam and keeps participation open.
 							</p>
 						</div>
 					</motion.div>

@@ -20,9 +20,7 @@ export default function Hero() {
 
 				<div className="mb-8 sm:mb-12 max-w-2xl mx-auto">
 					<p className="text-base sm:text-lg text-black/80 dark:text-white/80 font-sans leading-relaxed">
-						The mind of humanity in real time. An open, anonymous network for
-						human consensus. Answer questions to see demographic breakdowns, earn
-						credits to ask your own, and explore unfiltered perspectives.
+						The real-time pulse of human thought. Answer questions to see honest consensus without crowd bias, earn credits to ask your own, and discover what people truly think.
 					</p>
 				</div>
 

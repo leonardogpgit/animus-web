@@ -148,7 +148,7 @@ export default function Pricing() {
 										d="M5 13l4 4L19 7"
 									/>
 								</svg>
-								Post your own custom dilemmas
+								Post your own questions
 							</li>
 							<li className="flex gap-3">
 								<svg
@@ -164,7 +164,7 @@ export default function Pricing() {
 										d="M5 13l4 4L19 7"
 									/>
 								</svg>
-								Duplicate questions merged into single nodes
+								Duplicate questions automatically merged
 							</li>
 							<li className="flex gap-3">
 								<svg
@@ -180,7 +180,7 @@ export default function Pricing() {
 										d="M5 13l4 4L19 7"
 									/>
 								</svg>
-								Boost questions to reach wider demographics
+								Boost questions across local and global feeds
 							</li>
 							<li className="flex gap-3">
 								<svg
@@ -212,7 +212,7 @@ export default function Pricing() {
 										d="M5 13l4 4L19 7"
 									/>
 								</svg>
-								Credits earned strictly through participation
+								Zero paywalls—earn everything by answering
 							</li>
 						</ul>
 					</motion.div>
@@ -220,10 +220,10 @@ export default function Pricing() {
 					{/* Custom Groups Tier */}
 					<motion.div {...fade(0.3)} className="glass-panel p-8 flex flex-col">
 						<h3 className="text-2xl font-display font-bold text-black dark:text-white mb-2">
-							Custom Groups
+							Communities &amp; Teams
 						</h3>
 						<p className="text-black/80 dark:text-white/80 text-sm mb-6 font-sans">
-							For research teams, universities, and organizations.
+							For classrooms, workplaces, communities, and audiences.
 						</p>
 						<ul className="space-y-4 text-sm text-black dark:text-white flex-grow font-sans border-t border-slate-300 dark:border-white/10 pt-6">
 							<li className="flex gap-3">
@@ -240,7 +240,7 @@ export default function Pricing() {
 										d="M5 13l4 4L19 7"
 									/>
 								</svg>
-								Create targeted question batches
+								Direct shareable links for fast answering
 							</li>
 							<li className="flex gap-3">
 								<svg
@@ -256,7 +256,7 @@ export default function Pricing() {
 										d="M5 13l4 4L19 7"
 									/>
 								</svg>
-								Direct shareable link for participants
+								Instant aggregated group results
 							</li>
 							<li className="flex gap-3">
 								<svg
@@ -272,23 +272,7 @@ export default function Pricing() {
 										d="M5 13l4 4L19 7"
 									/>
 								</svg>
-								Instant aggregated group consensus
-							</li>
-							<li className="flex gap-3">
-								<svg
-									className="h-5 w-5 text-black dark:text-white shrink-0"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth="2"
-										d="M5 13l4 4L19 7"
-									/>
-								</svg>
-								Zero questionnaire fatigue
+								Zero survey fatigue
 							</li>
 							<li className="flex gap-3">
 								<svg
