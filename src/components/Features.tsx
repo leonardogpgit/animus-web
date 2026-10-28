@@ -65,8 +65,8 @@ export default function Features() {
 							The Graph
 						</h3>
 						<p className="text-black dark:text-white text-base sm:text-lg leading-relaxed mb-8 flex-grow z-10 font-sans">
-							Built on a graph database. When people ask similar questions,
-							Animus automatically merges them into a single question, keeping
+							Built on a graph database. When people ask similar questions,{" "}
+							<span translate="no" className="notranslate">Animus</span> automatically merges them into a single question, keeping
 							answers together for clear, reliable statistics.
 						</p>
 
@@ -76,7 +76,7 @@ export default function Features() {
 								<div className="w-2.5 h-2.5 rounded-full bg-neutral-600" />
 								<div className="w-2.5 h-2.5 rounded-full bg-neutral-600" />
 							</div>
-							<code className="break-words">
+							<code translate="no" className="break-words notranslate">
 								MATCH (q:Question)-[:CONSENSUS]-&gt;(d:Demographics) RETURN
 								q.title, d.ageGroup, d.breakdown
 							</code>

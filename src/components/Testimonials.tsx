@@ -48,7 +48,7 @@ export default function Testimonials() {
 						</span>
 					</h2>
 					<p className="text-lg sm:text-xl text-black dark:text-white font-sans">
-						Perspectives from people using Animus for daily reflection and
+						Perspectives from people using <span translate="no" className="notranslate">Animus</span> for daily reflection and
 						research.
 					</p>
 				</motion.div>
