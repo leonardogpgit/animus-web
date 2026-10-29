@@ -135,12 +135,10 @@ export default function Features() {
 							</svg>
 						</div>
 						<h3 className="text-xl font-display font-bold text-black dark:text-white mb-3">
-							Anonymous by Design
+							Anonymous by Design &amp; Zero Spyware
 						</h3>
 						<p className="text-black dark:text-white leading-relaxed text-sm sm:text-base font-sans">
-							No names, phone numbers, email addresses, or follower counts.
-							Only broad demographic brackets (age, gender, general region) to
-							show genuine patterns across groups.
+							No names, phone numbers, or tracking dossiers. Zero spyware or background telemetry—easily auditable by monitoring network traffic. Uncompromising encryption and permanent, unrecoverable deletion on demand.
 						</p>
 					</motion.div>
 
