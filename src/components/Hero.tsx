@@ -15,7 +15,7 @@ export default function Hero() {
 				className="container mx-auto my-auto px-4 sm:px-6 lg:px-8 text-center"
 			>
 				<h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-descscor font-extrabold tracking-tight text-black dark:text-white mb-6 sm:mb-8 max-w-5xl mx-auto leading-tight">
-					What do you think?
+					Tell us what you think
 				</h1>
 
 				<div className="mb-8 sm:mb-12 max-w-2xl mx-auto">
