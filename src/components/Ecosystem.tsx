@@ -1,0 +1,226 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { FiArrowUpRight, FiLayers, FiMessageSquare, FiMic, FiUsers, FiCpu, FiCheckCircle } from "react-icons/fi";
+
+const fade = (delay = 0) => ({
+	initial: { opacity: 0, y: 16 },
+	whileInView: { opacity: 1, y: 0 },
+	viewport: { once: true },
+	transition: { duration: 0.5, delay },
+});
+
+export default function Ecosystem() {
+	return (
+		<section
+			id="ecosystem"
+			className="scroll-mt-28 md:scroll-mt-20 py-20 sm:py-28 bg-[#e6ecf2] dark:bg-[#09090b] border-t border-slate-300 dark:border-white/10 relative overflow-hidden"
+		>
+			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
+				{/* Section Header */}
+				<motion.div {...fade(0)} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+					<div className="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-white/15 bg-white/40 dark:bg-white/5 px-3 py-1.5 text-xs font-michroma text-black/70 dark:text-white/70 mb-4 backdrop-blur-md">
+						<FiLayers className="h-3.5 w-3.5" />
+						<span>THE ANIMUS SUITE</span>
+					</div>
+					<h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-black dark:text-white mb-6">
+						The Unified Ecosystem
+					</h2>
+					<p className="text-lg sm:text-xl text-black/80 dark:text-white/80 font-sans leading-relaxed">
+						One collective graph of human truth powering a sovereign suite of three interconnected applications.
+					</p>
+				</motion.div>
+
+				{/* 3 App Cards Grid */}
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+					{/* App 1: Animus App */}
+					<motion.div
+						{...fade(0.1)}
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all"
+					>
+						<div>
+							<div className="flex items-center justify-between mb-6">
+								<div className="h-12 w-12 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold text-xl shadow-md">
+									A
+								</div>
+								<span className="rounded-full bg-black/5 dark:bg-white/10 px-3 py-1 text-xs font-mono font-semibold text-black/70 dark:text-white/70">
+									Daily Pulse
+								</span>
+							</div>
+
+							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
+								Animus App
+							</h3>
+							<p className="text-sm font-michroma text-black/60 dark:text-white/60 mb-6">
+								app.animusproject.org
+							</p>
+
+							<p className="text-black/80 dark:text-white/80 font-sans text-base leading-relaxed mb-6">
+								The daily ritual for honest public consensus. Answer 10 to 20 micro-dilemmas in 3 minutes to unlock real-time collective intelligence without social media outrage.
+							</p>
+
+							<ul className="space-y-3 text-sm text-black/70 dark:text-white/70 font-sans mb-8">
+								<li className="flex items-center gap-2">
+									<FiCheckCircle className="h-4 w-4 text-emerald-500 shrink-0" />
+									<span><strong>Commit-to-Unlock:</strong> Zero herd mentality.</span>
+								</li>
+								<li className="flex items-center gap-2">
+									<FiCheckCircle className="h-4 w-4 text-emerald-500 shrink-0" />
+									<span><strong>Give to Ask:</strong> Earn credits by answering.</span>
+								</li>
+								<li className="flex items-center gap-2">
+									<FiCheckCircle className="h-4 w-4 text-emerald-500 shrink-0" />
+									<span><strong>Radical Anonymity:</strong> Zero PII, pure graph data.</span>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<div className="pt-4 border-t border-slate-200 dark:border-white/10 mb-6 text-xs text-black/60 dark:text-white/50 font-sans italic">
+								Role: The foundational source that feeds the collective consensus graph.
+							</div>
+
+							<a
+								href="https://app.animusproject.org"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 transition-colors shadow-sm"
+							>
+								<span>Launch Animus App</span>
+								<FiArrowUpRight className="h-4 w-4" />
+							</a>
+						</div>
+					</motion.div>
+
+					{/* App 2: Animus Replica */}
+					<motion.div
+						{...fade(0.2)}
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all"
+					>
+						<div>
+							<div className="flex items-center justify-between mb-6">
+								<div className="h-12 w-12 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center shadow-md">
+									<FiCpu className="h-6 w-6" />
+								</div>
+								<span className="rounded-full bg-cyan-500/10 dark:bg-cyan-500/20 px-3 py-1 text-xs font-mono font-semibold text-cyan-600 dark:text-cyan-300">
+									Living Likeness
+								</span>
+							</div>
+
+							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
+								Animus Replica
+							</h3>
+							<p className="text-sm font-michroma text-black/60 dark:text-white/60 mb-6">
+								replica.animusproject.org
+							</p>
+
+							<p className="text-black/80 dark:text-white/80 font-sans text-base leading-relaxed mb-6">
+								Your proactive desktop companion (Jarvis) and living mask (*persona*). Synthesizes your moral convictions and real cloned voice into a private, sovereign memory vault.
+							</p>
+
+							<ul className="space-y-3 text-sm text-black/70 dark:text-white/70 font-sans mb-8">
+								<li className="flex items-center gap-2">
+									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+									<span><strong>Desktop Autonomy:</strong> Local automation on Linux &amp; Windows.</span>
+								</li>
+								<li className="flex items-center gap-2">
+									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+									<span><strong>Cloned Neural Voice:</strong> Speaks and reasons with your real tone.</span>
+								</li>
+								<li className="flex items-center gap-2">
+									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+									<span><strong>Animus Synergy:</strong> Dilemmas automatically calibrate your mask.</span>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<div className="pt-4 border-t border-slate-200 dark:border-white/10 mb-6 text-xs text-black/60 dark:text-white/50 font-sans italic">
+								Role: Private memory preservation, palliative legacy, and 24/7 personal stand-in.
+							</div>
+
+							<a
+								href="https://replica.animusproject.org"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold border border-slate-300 dark:border-white/20 bg-black/5 dark:bg-white/10 text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/20 transition-colors shadow-sm"
+							>
+								<span>Explore Replica</span>
+								<FiArrowUpRight className="h-4 w-4" />
+							</a>
+						</div>
+					</motion.div>
+
+					{/* App 3: Animus Resonance */}
+					<motion.div
+						{...fade(0.3)}
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border-2 border-cyan-500/30 dark:border-cyan-400/30 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-cyan-500 dark:hover:border-cyan-400 transition-all"
+					>
+						<div>
+							<div className="flex items-center justify-between mb-6">
+								<div className="h-12 w-12 rounded-2xl bg-cyan-500 text-white flex items-center justify-center shadow-md shadow-cyan-500/20">
+									<FiUsers className="h-6 w-6" />
+								</div>
+								<span className="rounded-full bg-cyan-500/10 dark:bg-cyan-500/20 border border-cyan-500/30 px-3 py-1 text-xs font-mono font-semibold text-cyan-600 dark:text-cyan-300">
+									The Anti-Tinder
+								</span>
+							</div>
+
+							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
+								Animus Resonance
+							</h3>
+							<p className="text-sm font-michroma text-black/60 dark:text-white/60 mb-6">
+								resonance.animusproject.org
+							</p>
+
+							<p className="text-black/80 dark:text-white/80 font-sans text-base leading-relaxed mb-6">
+								Multidimensional human connection without superficiality. Finds people with &gt;90% cognitive alignment based on your ethical and philosophical choices.
+							</p>
+
+							{/* Crucial Prerequisite Highlight Banner */}
+							<div className="mb-6 rounded-2xl bg-cyan-500/10 dark:bg-cyan-950/40 border border-cyan-500/30 p-4 text-xs font-sans text-black/90 dark:text-cyan-200 space-y-1.5">
+								<div className="font-bold font-michroma flex items-center gap-1.5 text-cyan-600 dark:text-cyan-300">
+									<span>Prerequisite: Powered by Animus</span>
+								</div>
+								<p className="leading-relaxed">
+									You must have an Animus account to use Resonance. <strong>The more dilemmas you answer in Animus, the sharper, deeper, and more accurate your resonance results become.</strong>
+								</p>
+							</div>
+
+							<ul className="space-y-3 text-sm text-black/70 dark:text-white/70 font-sans mb-8">
+								<li className="flex items-center gap-2">
+									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+									<span><strong>Multidimensional:</strong> Friends, project partners, gaming &amp; dating.</span>
+								</li>
+								<li className="flex items-center gap-2">
+									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+									<span><strong>Mind First:</strong> Blind matching, zero vanity photos or bios.</span>
+								</li>
+								<li className="flex items-center gap-2">
+									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+									<span><strong>Double-Blind:</strong> Mutual, bilateral progressive reveal.</span>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<div className="pt-4 border-t border-slate-200 dark:border-white/10 mb-6 text-xs text-black/60 dark:text-white/50 font-sans italic">
+								Role: Viral human connection layer for deep alignment across all areas of life.
+							</div>
+
+							<a
+								href="https://resonance.animusproject.org"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold bg-cyan-500 text-white hover:bg-cyan-600 transition-colors shadow-lg shadow-cyan-500/20"
+							>
+								<span>Discover Resonance</span>
+								<FiArrowUpRight className="h-4 w-4" />
+							</a>
+						</div>
+					</motion.div>
+				</div>
+			</div>
+		</section>
+	);
+}

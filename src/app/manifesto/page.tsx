@@ -24,8 +24,8 @@ export default async function ManifestoPage() {
 				<MarkdownLayout
 					htmlContent={html}
 					rawContent={body}
-					title="Animus — Manifesto & Brand Foundation"
-					lastUpdated="October 2026"
+					title="Animus — Manifesto, Vision & Strategic Roadmap"
+					lastUpdated="November 2026"
 				/>
 			</div>
 		</main>

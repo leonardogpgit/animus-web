@@ -24,8 +24,8 @@ export default async function LegalPage() {
 				<MarkdownLayout
 					htmlContent={html}
 					rawContent={body}
-					title="Legal — Privacy Policy & Terms"
-					lastUpdated="October 2026"
+					title="Animus Ecosystem — Master Legal Framework"
+					lastUpdated="November 2026"
 				/>
 			</div>
 		</main>
