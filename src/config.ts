@@ -75,10 +75,8 @@ export const site = {
 
 export const navLinks = [
 	{ href: "/#ecosystem", label: "Ecosystem" },
-	{ href: "/#vision", label: "Vision & Mission" },
-	{ href: "/#features", label: "How It Works" },
+	{ href: "/#vision", label: "Vision" },
 	{ href: "/#graph", label: "The Graph" },
-	{ href: "/manifesto", label: "Manifesto & Roadmap" },
 ] as const;
 
 export const suiteLinks = [
@@ -88,6 +86,6 @@ export const suiteLinks = [
 ] as const;
 
 export const legalLinks = [
-	{ href: "/manifesto", label: "Manifesto & Roadmap" },
-	{ href: "/legal", label: "Legal & Privacy" },
+	{ href: "/privacy", label: "Privacy Policy" },
+	{ href: "/terms", label: "Terms of Service" },
 ] as const;
