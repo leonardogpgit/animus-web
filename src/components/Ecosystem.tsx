@@ -49,10 +49,10 @@ export default function Ecosystem() {
 							</div>
 
 							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
-								Animus App
+								Animus
 							</h3>
 							<p className="text-sm font-michroma text-black/60 dark:text-white/60 mb-6">
-								app.animusproject.org
+								animus.animusproject.org
 							</p>
 
 							<p className="text-black/80 dark:text-white/80 font-sans text-base leading-relaxed mb-6">
@@ -81,18 +81,18 @@ export default function Ecosystem() {
 							</div>
 
 							<a
-								href="https://app.animusproject.org"
+								href="https://animus.animusproject.org"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 transition-colors shadow-sm"
 							>
-								<span>Launch Animus App</span>
+								<span>Launch Animus</span>
 								<FiArrowUpRight className="h-4 w-4" />
 							</a>
 						</div>
 					</motion.div>
 
-					{/* App 2: Animus Replica */}
+					{/* App 2: Animus Remnant */}
 					<motion.div
 						{...fade(0.2)}
 						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all"
@@ -108,10 +108,10 @@ export default function Ecosystem() {
 							</div>
 
 							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
-								Animus Replica
+								Animus Remnant
 							</h3>
 							<p className="text-sm font-michroma text-black/60 dark:text-white/60 mb-6">
-								replica.animusproject.org
+								remnant.animusproject.org
 							</p>
 
 							<p className="text-black/80 dark:text-white/80 font-sans text-base leading-relaxed mb-6">
@@ -140,12 +140,12 @@ export default function Ecosystem() {
 							</div>
 
 							<a
-								href="https://replica.animusproject.org"
+								href="https://remnant.animusproject.org"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold border border-slate-300 dark:border-white/20 bg-black/5 dark:bg-white/10 text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/20 transition-colors shadow-sm"
 							>
-								<span>Explore Replica</span>
+								<span>Explore Remnant</span>
 								<FiArrowUpRight className="h-4 w-4" />
 							</a>
 						</div>

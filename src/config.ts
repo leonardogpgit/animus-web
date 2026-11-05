@@ -12,7 +12,7 @@ export const site = {
 		"animus ecosystem",
 		"human consensus",
 		"collective mind",
-		"replica",
+		"remnant",
 		"resonance",
 		"opinion",
 		"demographics",
@@ -80,9 +80,9 @@ export const navLinks = [
 ] as const;
 
 export const suiteLinks = [
-	{ href: "https://app.animusproject.org", label: "Animus App" },
-	{ href: "https://replica.animusproject.org", label: "Animus Replica" },
-	{ href: "https://resonance.animusproject.org", label: "Animus Resonance" },
+	{ href: "https://animus.animusproject.org", label: "Animus™" },
+	{ href: "https://resonance.animusproject.org", label: "Resonance™" },
+	{ href: "https://remnant.animusproject.org", label: "Remnant™" },
 ] as const;
 
 export const legalLinks = [

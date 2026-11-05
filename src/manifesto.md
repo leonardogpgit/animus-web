@@ -31,13 +31,13 @@ Animus is not a single isolated feature; it is an integrated, sovereign digital 
             ┌──────────────────────────────┼──────────────────────────────┐
             ▼                              ▼                              ▼
   ┌───────────────────┐          ┌───────────────────┐          ┌───────────────────┐
-  │      APP-WEB      │          │    REPLICA-WEB    │          │   RESONANCE-WEB   │
+  │      ANIMUS       │          │      REMNANT      │          │     RESONANCE     │
   │  Consumo y Dilemas│          │  La Máscara Viva  │          │   El Anti-Tinder  │
-  │  (app.animus...)  │          │ (replica.animus..)│          │(resonance.animus.)│
+  │ (animus.animus...)│          │ (remnant.animus..)│          │(resonance.animus.)│
   └─────────┬─────────┘          └─────────▲─────────┘          └─────────▲─────────┘
             │                              │                              │
             │ (Opcional: Respuestas        │                              │ (Obligatorio:
-            │  alimentan a Replica)        │                              │  Grafo de Animus
+            │  alimentan a Remnant)        │                              │  Grafo de Animus
             └──────────────────────────────┘                              │  para calcular >90%
             │                                                             │  de concordancia)
             └─────────────────────────────────────────────────────────────┘
@@ -50,13 +50,13 @@ Animus is not a single isolated feature; it is an integrated, sovereign digital 
 * **Fair Reciprocity ("Give to Ask")**: Every answer earns participation credits; credits allow you to submit dilemmas and boost their reach. A self-sustaining economy of human curiosity without paywalls.
 * **The Neo4j Knowledge Graph**: Semantic deduplication automatically merges overlapping questions into consolidated nodes, giving deep statistical insight without vote fragmentation.
 
-### Pillar II — Animus Replica (The Living Mask & Elite Assistant)
-* **The Concept of the Mask (*Persona*)**: In classical antiquity, *persona* was the actor's mask through which their voice resonated. Replica creates an authentic, structured digital likeness of that mask—learning your values, humor, reasoning criteria, and true cloned voice.
+### Pillar II — Animus Remnant (The Living Mask & Elite Assistant)
+* **The Concept of the Mask (*Persona*)**: In classical antiquity, *persona* was the actor's mask through which their voice resonated. Remnant creates an authentic, structured digital likeness of that mask—learning your values, humor, reasoning criteria, and true cloned voice.
 * **Dual Architecture**:
   1. *Jarvis*: Desktop assistant (Linux, Windows) with proactive local automation, active listening, and private episodic memory construction.
-  2. *Replica*: The living voice mask. Speaks with your real cloned voice and reasons through novel scenarios based on your verified convictions.
+  2. *Remnant*: The living voice mask. Speaks with your real cloned voice and reasons through novel scenarios based on your verified convictions.
 * **Sacred Use Cases**: Family legacy and intergenerational guidance (the Jor-El principle), clinical support in palliative care and cognitive health, and 24/7 personal work representation.
-* **Ecosystem Synergy**: Connecting Animus to Replica is strictly client-controlled and optional. When enabled, your daily dilemma answers in Animus effortlessly calibrate your Replica mask with zero extra work.
+* **Ecosystem Synergy**: Connecting Animus to Remnant is strictly client-controlled and optional. When enabled, your daily dilemma answers in Animus effortlessly calibrate your Remnant mask with zero extra work.
 
 ### Pillar III — Animus Resonance (Cognitive Resonance & Multidimensional Connection)
 * **The "Anti-Tinder" Philosophy**: Modern connection apps reduce human beings to 2-second photo evaluations and superficial bios. Resonance connects people based strictly on **cognitive and ethical alignment**.
@@ -99,7 +99,7 @@ Animus is not a single isolated feature; it is an integrated, sovereign digital 
 - Category-configurable affinity: allowing users to match on 95% ethical alignment while embracing different hobbies to avoid ideological echo chambers.
 - Cross-platform WebGL 3D visualization of neural memory topology and real-time thought traversal.
 
-### Phase 3 — Sovereign Memory & Living Likeness (Animus Replica) *(In Active Development)*
+### Phase 3 — Sovereign Memory & Living Likeness (Animus Remnant) *(In Active Development)*
 - Deep integration of Jarvis desktop automation on Linux and Windows.
 - Episodic knowledge vault in Neo4j with strict sector isolation (`/user`, `/persona`, `/system`).
 - Zero-hallucination deterministic recall combining knowledge graphs with local LLM reasoning.
