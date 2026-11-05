@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiLayers, FiArrowDown } from "react-icons/fi";
+import { FiArrowDown } from "react-icons/fi";
 
 export default function Hero() {
 	return (
@@ -15,19 +15,13 @@ export default function Hero() {
 				transition={{ duration: 0.6 }}
 				className="container mx-auto my-auto px-4 sm:px-6 lg:px-8 text-center"
 			>
-				{/* Ecosystem Pill */}
-				<div className="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-white/15 bg-white/40 dark:bg-white/5 px-3 py-1.5 text-xs font-michroma text-black/70 dark:text-white/70 mb-6 backdrop-blur-md">
-					<FiLayers className="h-3.5 w-3.5" />
-					<span>COLLECTIVE INTELLIGENCE &amp; SOVEREIGN ECOSYSTEM</span>
-				</div>
-
 				<h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-descscor font-extrabold tracking-tight text-black dark:text-white mb-6 sm:mb-8 max-w-5xl mx-auto leading-tight">
 					Tell us what you think
 				</h1>
 
 				<div className="mb-8 sm:mb-12 max-w-3xl mx-auto">
 					<p className="text-base sm:text-xl text-black/80 dark:text-white/80 font-sans leading-relaxed">
-						The real-time pulse of human thought. Answer dilemmas to reveal honest consensus without crowd bias, earn credits to ask your own, and power a sovereign suite of apps for truth, memory, and deep human connection.
+						The real-time pulse of human thought. Answer dilemmas to reveal honest consensus without crowd bias, earn credits to ask your own, and power a sovereign ecosystem for truth, memory, and deep human connection.
 					</p>
 				</div>
 
@@ -41,12 +35,12 @@ export default function Hero() {
 					</a>
 
 					<a
-						href="https://app.animusproject.org"
+						href="https://animus.animusproject.org"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="w-full sm:w-auto inline-flex items-center justify-center font-michroma text-sm sm:text-base px-8 py-4 rounded-xl border border-slate-300 dark:border-white/20 bg-white/60 dark:bg-white/10 text-black dark:text-white hover:bg-white/90 dark:hover:bg-white/20 transition-colors shadow-sm font-bold"
 					>
-						Get the Mobile App
+						Open Animus
 					</a>
 				</div>
 			</motion.div>

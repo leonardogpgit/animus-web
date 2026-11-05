@@ -19,10 +19,6 @@ export default function VisionMission() {
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
 				{/* Section Header */}
 				<motion.div {...fade(0)} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-					<div className="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-white/15 bg-white/40 dark:bg-white/5 px-3 py-1.5 text-xs font-michroma text-black/70 dark:text-white/70 mb-4 backdrop-blur-md">
-						<FiTarget className="h-3.5 w-3.5" />
-						<span>PURPOSE &amp; HORIZON</span>
-					</div>
 					<h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-black dark:text-white mb-6">
 						Vision &amp; Mission
 					</h2>
