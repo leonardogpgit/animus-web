@@ -9,7 +9,6 @@ export const site = {
 	keywords: [
 		"animus",
 		"animus project",
-		"animus ecosystem",
 		"human consensus",
 		"collective mind",
 		"remnant",
@@ -74,9 +73,9 @@ export const site = {
 } as const;
 
 export const navLinks = [
-	{ href: "/#ecosystem", label: "Ecosystem" },
-	{ href: "/#vision", label: "Vision" },
-	{ href: "/#graph", label: "The Graph" },
+	{ href: "https://animus.animusproject.org", label: "Animus" },
+	{ href: "https://resonance.animusproject.org", label: "Resonance" },
+	{ href: "https://remnant.animusproject.org", label: "Remnant" },
 ] as const;
 
 export const suiteLinks = [

@@ -13,17 +13,17 @@ const fade = (delay = 0) => ({
 export default function Ecosystem() {
 	return (
 		<section
-			id="ecosystem"
+			id="suite"
 			className="scroll-mt-28 md:scroll-mt-20 py-20 sm:py-28 bg-[#e6ecf2] dark:bg-[#09090b] border-t border-slate-300 dark:border-white/10 relative overflow-hidden"
 		>
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
 				{/* Section Header */}
 				<motion.div {...fade(0)} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
 					<h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-black dark:text-white mb-6">
-						The Unified Ecosystem
+						The Three Platforms
 					</h2>
 					<p className="text-lg sm:text-xl text-black/80 dark:text-white/80 font-sans leading-relaxed">
-						One collective graph of human truth powering an ecosystem of three sovereign platforms.
+						One collective graph of human truth powering three sovereign platforms.
 					</p>
 				</motion.div>
 
@@ -72,17 +72,13 @@ export default function Ecosystem() {
 						</div>
 
 						<div>
-							<div className="pt-4 border-t border-slate-200 dark:border-white/10 mb-6 text-xs text-black/60 dark:text-white/50 font-sans italic">
-								Role: The foundational source that feeds the collective consensus graph.
-							</div>
-
 							<a
 								href="https://animus.animusproject.org"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 transition-colors shadow-sm"
 							>
-								<span>Launch Animus</span>
+								<span>Animus</span>
 								<FiArrowUpRight className="h-4 w-4" />
 							</a>
 						</div>
@@ -131,17 +127,13 @@ export default function Ecosystem() {
 						</div>
 
 						<div>
-							<div className="pt-4 border-t border-slate-200 dark:border-white/10 mb-6 text-xs text-black/60 dark:text-white/50 font-sans italic">
-								Role: Private memory preservation, palliative legacy, and 24/7 personal stand-in.
-							</div>
-
 							<a
 								href="https://remnant.animusproject.org"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold border border-slate-300 dark:border-white/20 bg-black/5 dark:bg-white/10 text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/20 transition-colors shadow-sm"
 							>
-								<span>Explore Remnant</span>
+								<span>Remnant</span>
 								<FiArrowUpRight className="h-4 w-4" />
 							</a>
 						</div>
@@ -200,17 +192,13 @@ export default function Ecosystem() {
 						</div>
 
 						<div>
-							<div className="pt-4 border-t border-slate-200 dark:border-white/10 mb-6 text-xs text-black/60 dark:text-white/50 font-sans italic">
-								Role: Viral human connection layer for deep alignment across all areas of life.
-							</div>
-
 							<a
 								href="https://resonance.animusproject.org"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold bg-cyan-500 text-white hover:bg-cyan-600 transition-colors shadow-lg shadow-cyan-500/20"
 							>
-								<span>Discover Resonance</span>
+								<span>Resonance</span>
 								<FiArrowUpRight className="h-4 w-4" />
 							</a>
 						</div>
