@@ -133,28 +133,6 @@
   .text-gradient {
     @apply text-black dark:text-white;
   }
-
-  .metal-slab-bar {
-    width: 100%;
-    background-image: url('/textures/etched_dark_slab_3840x240.webp');
-    background-repeat: repeat-x;
-    background-size: auto 100%;
-    background-position: left center;
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-  }
-
-  :root.dark .metal-slab-bar,
-  .dark .metal-slab-bar {
-    background-image: url('/textures/chrome_slab_3840x240.webp');
-    background-repeat: repeat-x;
-    background-size: auto 100%;
-    background-position: left center;
-    border-top: 1px solid rgba(255, 255, 255, 0.8);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
-  }
 }
 
 /* Base styles for scroll animation classes */

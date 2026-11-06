@@ -36,9 +36,9 @@ export default function Features() {
 					{/* Feature 1: Answer to Unlock */}
 					<motion.div
 						{...fade(0.1)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-michroma"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-sans"
 					>
-						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3">
+						<h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3">
 							Answer to Unlock
 						</h3>
 						<p className="text-black/80 dark:text-white/80 leading-relaxed text-xs sm:text-sm">
@@ -50,9 +50,9 @@ export default function Features() {
 					{/* Feature 2: Radical Privacy */}
 					<motion.div
 						{...fade(0.2)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-michroma"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-sans"
 					>
-						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3">
+						<h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3">
 							Anonymous by Design &amp; Zero Spyware
 						</h3>
 						<p className="text-black/80 dark:text-white/80 leading-relaxed text-xs sm:text-sm">
@@ -63,9 +63,9 @@ export default function Features() {
 					{/* Feature 3: Give to Ask */}
 					<motion.div
 						{...fade(0.3)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-michroma"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-sans"
 					>
-						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3">
+						<h3 className="text-base sm:text-lg font-semibold text-black dark:text-white mb-3">
 							Give to Ask
 						</h3>
 						<p className="text-black/80 dark:text-white/80 leading-relaxed text-xs sm:text-sm">

@@ -32,10 +32,10 @@ export default function Ecosystem() {
 					{/* 1: Animus */}
 					<motion.div
 						{...fade(0.1)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all font-michroma"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all font-sans"
 					>
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
+							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2">
 								Animus
 							</h3>
 							<p className="text-xs text-black/60 dark:text-white/60 mb-6">
@@ -64,7 +64,7 @@ export default function Ecosystem() {
 								href="https://animus.animusproject.org"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 transition-colors shadow-sm"
+								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-semibold bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 transition-colors shadow-sm"
 							>
 								<span>Animus</span>
 								<FiArrowUpRight className="h-4 w-4" />
@@ -75,10 +75,10 @@ export default function Ecosystem() {
 					{/* App 2: Animus Remnant */}
 					<motion.div
 						{...fade(0.2)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all font-michroma"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all font-sans"
 					>
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
+							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2">
 								Animus Remnant
 							</h3>
 							<p className="text-xs text-black/60 dark:text-white/60 mb-6">
@@ -107,7 +107,7 @@ export default function Ecosystem() {
 								href="https://remnant.animusproject.org"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold border border-slate-300 dark:border-white/20 bg-black/5 dark:bg-white/10 text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/20 transition-colors shadow-sm"
+								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-semibold bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 transition-colors shadow-sm"
 							>
 								<span>Remnant</span>
 								<FiArrowUpRight className="h-4 w-4" />
@@ -118,10 +118,10 @@ export default function Ecosystem() {
 					{/* App 3: Animus Resonance */}
 					<motion.div
 						{...fade(0.3)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border-2 border-cyan-500/30 dark:border-cyan-400/30 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-cyan-500 dark:hover:border-cyan-400 transition-all font-michroma"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all font-sans"
 					>
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
+							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2">
 								Animus Resonance
 							</h3>
 							<p className="text-xs text-black/60 dark:text-white/60 mb-6">
@@ -133,8 +133,8 @@ export default function Ecosystem() {
 							</p>
 
 							{/* Crucial Prerequisite Highlight Banner */}
-							<div className="mb-6 rounded-2xl bg-cyan-500/10 dark:bg-cyan-950/40 border border-cyan-500/30 p-4 text-xs text-black/90 dark:text-cyan-200 space-y-1.5 font-michroma">
-								<div className="font-bold text-cyan-600 dark:text-cyan-300">
+							<div className="mb-6 rounded-2xl bg-slate-200/50 dark:bg-white/5 border border-slate-300 dark:border-white/10 p-4 text-xs text-black/80 dark:text-white/80 space-y-1.5 font-sans">
+								<div className="font-semibold text-black dark:text-white">
 									Prerequisite: Powered by Animus
 								</div>
 								<p className="leading-relaxed">
@@ -160,7 +160,7 @@ export default function Ecosystem() {
 								href="https://resonance.animusproject.org"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-bold bg-cyan-500 text-white hover:bg-cyan-600 transition-colors shadow-lg shadow-cyan-500/20"
+								className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-michroma text-sm font-semibold bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 transition-colors shadow-sm"
 							>
 								<span>Resonance</span>
 								<FiArrowUpRight className="h-4 w-4" />

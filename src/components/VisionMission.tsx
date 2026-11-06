@@ -28,10 +28,10 @@ export default function VisionMission() {
 					{/* Mission Card */}
 					<motion.div
 						{...fade(0.1)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm font-michroma"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm font-sans"
 					>
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-4">
+							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-4">
 								Our Mission
 							</h3>
 							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed">
@@ -43,10 +43,10 @@ export default function VisionMission() {
 					{/* Vision Card */}
 					<motion.div
 						{...fade(0.2)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm font-michroma"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm font-sans"
 					>
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-4">
+							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-4">
 								Our Vision
 							</h3>
 							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed">
