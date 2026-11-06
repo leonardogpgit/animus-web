@@ -17,13 +17,10 @@ export default function VisionMission() {
 		>
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
 				{/* Section Header */}
-				<motion.div {...fade(0)} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-					<h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-black dark:text-white mb-6">
+				<motion.div {...fade(0)} className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+					<h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-black dark:text-white">
 						Vision &amp; Mission
 					</h2>
-					<p className="text-lg text-black/80 dark:text-white/80 font-sans leading-relaxed">
-						Rebuilding the digital public square on mathematical truth, cognitive sovereignty, and genuine human connection.
-					</p>
 				</motion.div>
 
 				{/* Two-Column Grid: Vision & Mission */}
@@ -31,17 +28,14 @@ export default function VisionMission() {
 					{/* Mission Card */}
 					<motion.div
 						{...fade(0.1)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm font-michroma"
 					>
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-4">
+							<h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-4">
 								Our Mission
 							</h3>
-							<p className="text-black/80 dark:text-white/80 font-sans text-base sm:text-lg leading-relaxed mb-6">
+							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed">
 								To dismantle the commercial outrage machine and eliminate herd mentality by deploying a real-time, zero-bias collective intelligence infrastructure.
-							</p>
-							<p className="text-black/70 dark:text-white/70 font-sans text-sm sm:text-base leading-relaxed">
-								Every human voice possesses inherent value. We provide a clean, anonymous space where people answer ethical, cultural, and everyday dilemmas without social pressure—turning honest perspectives into verifiable statistical knowledge.
 							</p>
 						</div>
 					</motion.div>
@@ -49,17 +43,14 @@ export default function VisionMission() {
 					{/* Vision Card */}
 					<motion.div
 						{...fade(0.2)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm font-michroma"
 					>
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-4">
+							<h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-4">
 								Our Vision
 							</h3>
-							<p className="text-black/80 dark:text-white/80 font-sans text-base sm:text-lg leading-relaxed mb-6">
+							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed">
 								A sovereign digital ecosystem where collective human truth, multidimensional interpersonal resonance, and personal memory synthesis coexist without exploitation.
-							</p>
-							<p className="text-black/70 dark:text-white/70 font-sans text-sm sm:text-base leading-relaxed">
-								We envision a future where technology acts as an objective mirror for civilization, where people connect deeply based on genuine philosophical resonance rather than superficial swipes, and where each individual owns their digital likeness with mathematical certainty.
 							</p>
 						</div>
 					</motion.div>

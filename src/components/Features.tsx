@@ -20,17 +20,14 @@ export default function Features() {
 					{...fade(0)}
 					className="text-center max-w-3xl mx-auto mb-14 sm:mb-20"
 				>
-					<h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-black dark:text-white mb-6">
+					<h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-black dark:text-white mb-4">
 						Every voice counts. <br />
 						<span className="text-black/80 dark:text-white/80 font-heading">
 							Every bias removed.
 						</span>
 					</h2>
-					<p className="text-lg sm:text-xl text-black dark:text-white font-medium font-sans mb-4">
+					<p className="text-sm sm:text-base text-black/80 dark:text-white/80 font-michroma">
 						100% free, anonymous, and powered by reciprocity.
-					</p>
-					<p className="text-base sm:text-lg text-black dark:text-white font-sans">
-						No outrage algorithms, no herd mentality, and no noise. Just honest questions, real consensus, and fair reciprocity.
 					</p>
 				</motion.div>
 
@@ -39,12 +36,12 @@ export default function Features() {
 					{/* Feature 1: Answer to Unlock */}
 					<motion.div
 						{...fade(0.1)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px]"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-michroma"
 					>
-						<h3 className="text-xl font-display font-bold text-black dark:text-white mb-3">
+						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3">
 							Answer to Unlock
 						</h3>
-						<p className="text-black dark:text-white leading-relaxed text-sm sm:text-base font-sans">
+						<p className="text-black/80 dark:text-white/80 leading-relaxed text-xs sm:text-sm">
 							You must commit your own answer before seeing community
 							results. No herd mentality, no bandwagon bias, and no peek ahead.
 						</p>
@@ -53,12 +50,12 @@ export default function Features() {
 					{/* Feature 2: Radical Privacy */}
 					<motion.div
 						{...fade(0.2)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px]"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-michroma"
 					>
-						<h3 className="text-xl font-display font-bold text-black dark:text-white mb-3">
+						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3">
 							Anonymous by Design &amp; Zero Spyware
 						</h3>
-						<p className="text-black dark:text-white leading-relaxed text-sm sm:text-base font-sans">
+						<p className="text-black/80 dark:text-white/80 leading-relaxed text-xs sm:text-sm">
 							No names, phone numbers, or tracking dossiers. Zero spyware or background telemetry—easily auditable by monitoring network traffic. Uncompromising encryption and permanent, unrecoverable deletion on demand.
 						</p>
 					</motion.div>
@@ -66,12 +63,12 @@ export default function Features() {
 					{/* Feature 3: Give to Ask */}
 					<motion.div
 						{...fade(0.3)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px]"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-michroma"
 					>
-						<h3 className="text-xl font-display font-bold text-black dark:text-white mb-3">
+						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3">
 							Give to Ask
 						</h3>
-						<p className="text-black dark:text-white leading-relaxed text-sm sm:text-base font-sans">
+						<p className="text-black/80 dark:text-white/80 leading-relaxed text-xs sm:text-sm">
 							Answer questions to earn credits, then spend credits to post
 							your own questions or boost their reach. A fair system that
 							prevents spam and keeps participation open.

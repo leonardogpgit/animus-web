@@ -18,8 +18,8 @@ export default function Hero() {
 					Tell us what you think
 				</h1>
 
-				<div className="mb-8 sm:mb-12 max-w-3xl mx-auto">
-					<p className="text-base sm:text-xl text-black/80 dark:text-white/80 font-sans leading-relaxed">
+				<div className="mb-8 sm:mb-10 max-w-2xl mx-auto">
+					<p className="text-xs sm:text-sm text-black/75 dark:text-white/75 font-michroma leading-relaxed">
 						The real-time pulse of human thought. Answer dilemmas to reveal honest consensus without crowd bias, earn credits to ask your own, and power three sovereign platforms for truth, memory, and deep human connection.
 					</p>
 				</div>

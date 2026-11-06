@@ -18,11 +18,11 @@ export default function Ecosystem() {
 		>
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
 				{/* Section Header */}
-				<motion.div {...fade(0)} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-					<h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-black dark:text-white mb-6">
+				<motion.div {...fade(0)} className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+					<h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-black dark:text-white mb-4">
 						The Three Platforms
 					</h2>
-					<p className="text-lg sm:text-xl text-black/80 dark:text-white/80 font-sans leading-relaxed">
+					<p className="text-sm sm:text-base text-black/75 dark:text-white/75 font-michroma leading-relaxed">
 						One collective graph of human truth powering three sovereign platforms.
 					</p>
 				</motion.div>
@@ -32,21 +32,21 @@ export default function Ecosystem() {
 					{/* 1: Animus */}
 					<motion.div
 						{...fade(0.1)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all font-michroma"
 					>
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
+							<h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
 								Animus
 							</h3>
-							<p className="text-sm font-michroma text-black/60 dark:text-white/60 mb-6">
+							<p className="text-xs text-black/60 dark:text-white/60 mb-6">
 								animus.animusproject.org
 							</p>
 
-							<p className="text-black/80 dark:text-white/80 font-sans text-base leading-relaxed mb-6">
+							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed mb-6">
 								The daily ritual for honest public consensus. Answer 10 to 20 micro-dilemmas in 3 minutes to unlock real-time collective intelligence without social media outrage.
 							</p>
 
-							<ul className="space-y-3 text-sm text-black/70 dark:text-white/70 font-sans mb-8">
+							<ul className="space-y-3 text-xs text-black/70 dark:text-white/70 mb-8">
 								<li>
 									<span><strong>Commit-to-Unlock:</strong> Zero herd mentality.</span>
 								</li>
@@ -75,21 +75,21 @@ export default function Ecosystem() {
 					{/* App 2: Animus Remnant */}
 					<motion.div
 						{...fade(0.2)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all font-michroma"
 					>
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
+							<h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
 								Animus Remnant
 							</h3>
-							<p className="text-sm font-michroma text-black/60 dark:text-white/60 mb-6">
+							<p className="text-xs text-black/60 dark:text-white/60 mb-6">
 								remnant.animusproject.org
 							</p>
 
-							<p className="text-black/80 dark:text-white/80 font-sans text-base leading-relaxed mb-6">
+							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed mb-6">
 								Your proactive desktop companion (Jarvis) and living mask (*persona*). Synthesizes your moral convictions and real cloned voice into a private, sovereign memory vault.
 							</p>
 
-							<ul className="space-y-3 text-sm text-black/70 dark:text-white/70 font-sans mb-8">
+							<ul className="space-y-3 text-xs text-black/70 dark:text-white/70 mb-8">
 								<li>
 									<span><strong>Desktop Autonomy:</strong> Local automation on Linux &amp; Windows.</span>
 								</li>
@@ -118,23 +118,23 @@ export default function Ecosystem() {
 					{/* App 3: Animus Resonance */}
 					<motion.div
 						{...fade(0.3)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border-2 border-cyan-500/30 dark:border-cyan-400/30 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-cyan-500 dark:hover:border-cyan-400 transition-all"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border-2 border-cyan-500/30 dark:border-cyan-400/30 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-cyan-500 dark:hover:border-cyan-400 transition-all font-michroma"
 					>
 						<div>
-							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
+							<h3 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
 								Animus Resonance
 							</h3>
-							<p className="text-sm font-michroma text-black/60 dark:text-white/60 mb-6">
+							<p className="text-xs text-black/60 dark:text-white/60 mb-6">
 								resonance.animusproject.org
 							</p>
 
-							<p className="text-black/80 dark:text-white/80 font-sans text-base leading-relaxed mb-6">
+							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed mb-6">
 								Multidimensional human connection without superficiality. Finds people with &gt;90% cognitive alignment based on your ethical and philosophical choices.
 							</p>
 
 							{/* Crucial Prerequisite Highlight Banner */}
-							<div className="mb-6 rounded-2xl bg-cyan-500/10 dark:bg-cyan-950/40 border border-cyan-500/30 p-4 text-xs font-sans text-black/90 dark:text-cyan-200 space-y-1.5">
-								<div className="font-bold font-michroma text-cyan-600 dark:text-cyan-300">
+							<div className="mb-6 rounded-2xl bg-cyan-500/10 dark:bg-cyan-950/40 border border-cyan-500/30 p-4 text-xs text-black/90 dark:text-cyan-200 space-y-1.5 font-michroma">
+								<div className="font-bold text-cyan-600 dark:text-cyan-300">
 									Prerequisite: Powered by Animus
 								</div>
 								<p className="leading-relaxed">
@@ -142,7 +142,7 @@ export default function Ecosystem() {
 								</p>
 							</div>
 
-							<ul className="space-y-3 text-sm text-black/70 dark:text-white/70 font-sans mb-8">
+							<ul className="space-y-3 text-xs text-black/70 dark:text-white/70 mb-8">
 								<li>
 									<span><strong>Multidimensional:</strong> Friends, project partners, gaming &amp; dating.</span>
 								</li>
