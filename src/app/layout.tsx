@@ -19,12 +19,6 @@ const michroma = localFont({
 	display: "swap",
 });
 
-const descScor = localFont({
-	src: "./fonts/DescScor.ttf",
-	variable: "--font-descscor",
-	display: "swap",
-});
-
 export const metadata: Metadata = {
 	metadataBase: new URL(site.url),
 	title: {
@@ -72,7 +66,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${tektur.variable} ${michroma.variable} ${descScor.variable} flex min-h-screen flex-col bg-[#e6ecf2] text-black transition-colors duration-300 dark:bg-[#09090b] dark:text-white`}
+				className={`${tektur.variable} ${michroma.variable} flex min-h-screen flex-col bg-[#e6ecf2] text-black transition-colors duration-300 dark:bg-[#09090b] dark:text-white`}
 			>
 				<AuthProvider>
 					<Header />

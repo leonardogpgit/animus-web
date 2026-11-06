@@ -36,12 +36,7 @@ h6 *,
 .section-heading,
 .section-heading *,
 .main-title,
-.main-title *,
-.font-descscor,
-.font-descscor *,
-.font-orbitron,
-.font-descmenu,
-.font-michroma {
+.main-title * {
 	font-family: var(--font-michroma), ui-sans-serif, sans-serif !important;
 }
 
@@ -52,7 +47,7 @@ h4,
 h5,
 h6 {
 	font-weight: 700;
-	letter-spacing: 0.02em;
+	letter-spacing: normal;
 	color: #000000;
 }
 
@@ -72,20 +67,21 @@ nav,
 	font-family: var(--font-michroma), ui-sans-serif, sans-serif;
 }
 
+.main-title,
+.font-descscor,
+.font-orbitron,
+.font-descmenu,
+.font-michroma {
+	font-family: var(--font-michroma), ui-sans-serif, sans-serif !important;
+}
+
 .font-quantico,
 .font-tektur {
 	font-family: var(--font-tektur), ui-sans-serif, sans-serif !important;
 	letter-spacing: 0.05em;
 }
 
-p,
-li,
-a,
-input,
-textarea,
-select,
-label {
-	font-family: var(--font-tektur), ui-sans-serif, sans-serif;
+p, li, a, input, textarea, select, label {
 	letter-spacing: 0.05em;
 }
 
