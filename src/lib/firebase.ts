@@ -1,6 +1,7 @@
 import { type Analytics, getAnalytics, isSupported } from "firebase/analytics";
 import { type FirebaseApp, getApp, getApps, initializeApp } from "firebase/app";
 import { type Auth, GoogleAuthProvider, getAuth } from "firebase/auth";
+import { type Firestore, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
 	apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -29,6 +30,7 @@ const app: FirebaseApp =
 			);
 
 const auth: Auth = getAuth(app);
+const db: Firestore = getFirestore(app);
 const googleProvider = new GoogleAuthProvider();
 
 let analytics: Analytics | null = null;
@@ -40,4 +42,4 @@ if (typeof window !== "undefined") {
 	});
 }
 
-export { analytics, app, auth, googleProvider };
+export { analytics, app, auth, db, googleProvider };
