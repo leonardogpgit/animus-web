@@ -12,6 +12,8 @@ import {
 	FiLayers,
 	FiKey,
 	FiExternalLink,
+	FiEye,
+	FiEyeOff,
 } from "react-icons/fi";
 
 interface EvaluatorData {
@@ -21,6 +23,7 @@ interface EvaluatorData {
 
 export default function ReviewPage() {
 	const [passcode, setPasscode] = useState("");
+	const [showPasscode, setShowPasscode] = useState(false);
 	const [loading, setLoading] = useState(false);
 	const [initialLoading, setInitialLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
@@ -140,15 +143,27 @@ export default function ReviewPage() {
 									<FiKey className="h-4 w-4" />
 								</div>
 								<input
-									type="password"
+									type={showPasscode ? "text" : "password"}
 									value={passcode}
 									onChange={(e) => setPasscode(e.target.value)}
 									placeholder="Enter access passcode"
 									disabled={loading}
 									autoFocus
 									required
-									className="w-full pl-10 pr-4 py-3.5 rounded-xl border border-slate-300 dark:border-white/20 bg-white dark:bg-black/40 text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition"
+									className="w-full pl-10 pr-11 py-3.5 rounded-xl border border-slate-300 dark:border-white/20 bg-white dark:bg-black/40 text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition"
 								/>
+								<button
+									type="button"
+									onClick={() => setShowPasscode((prev) => !prev)}
+									className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-black/50 hover:text-black dark:text-white/50 dark:hover:text-white transition-colors"
+									aria-label={showPasscode ? "Hide passcode" : "Show passcode"}
+								>
+									{showPasscode ? (
+										<FiEyeOff className="h-4 w-4" />
+									) : (
+										<FiEye className="h-4 w-4" />
+									)}
+								</button>
 							</div>
 
 							<button

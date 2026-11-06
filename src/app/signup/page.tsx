@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function SignupPage() {
 	useEffect(() => {
-		window.location.href = "https://app.animusproject.org/login";
+		window.location.href = "https://animus.animusproject.org/login";
 	}, []);
 
 	return (
