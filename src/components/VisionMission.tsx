@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiEye, FiTarget, FiShield, FiCpu } from "react-icons/fi";
 
 const fade = (delay = 0) => ({
 	initial: { opacity: 0, y: 16 },
@@ -35,9 +34,6 @@ export default function VisionMission() {
 						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm"
 					>
 						<div>
-							<div className="h-12 w-12 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center mb-6 shadow-md">
-								<FiTarget className="h-6 w-6" />
-							</div>
 							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-4">
 								Our Mission
 							</h3>
@@ -48,11 +44,6 @@ export default function VisionMission() {
 								Every human voice possesses inherent value. We provide a clean, anonymous space where people answer ethical, cultural, and everyday dilemmas without social pressure—turning honest perspectives into verifiable statistical knowledge.
 							</p>
 						</div>
-
-						<div className="mt-8 pt-6 border-t border-slate-200 dark:border-white/10 flex items-center gap-2 text-xs font-mono text-black/60 dark:text-white/60">
-							<FiShield className="h-4 w-4 text-emerald-500" />
-							<span>Zero surveillance • Zero ads • Zero manipulation</span>
-						</div>
 					</motion.div>
 
 					{/* Vision Card */}
@@ -61,9 +52,6 @@ export default function VisionMission() {
 						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm"
 					>
 						<div>
-							<div className="h-12 w-12 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center mb-6 shadow-md">
-								<FiEye className="h-6 w-6" />
-							</div>
 							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-4">
 								Our Vision
 							</h3>
@@ -73,11 +61,6 @@ export default function VisionMission() {
 							<p className="text-black/70 dark:text-white/70 font-sans text-sm sm:text-base leading-relaxed">
 								We envision a future where technology acts as an objective mirror for civilization, where people connect deeply based on genuine philosophical resonance rather than superficial swipes, and where each individual owns their digital likeness with mathematical certainty.
 							</p>
-						</div>
-
-						<div className="mt-8 pt-6 border-t border-slate-200 dark:border-white/10 flex items-center gap-2 text-xs font-mono text-black/60 dark:text-white/60">
-							<FiCpu className="h-4 w-4 text-cyan-500" />
-							<span>Neo4j Graph Engine • Sovereign AI • Cryptographic Sanctity</span>
 						</div>
 					</motion.div>
 				</div>

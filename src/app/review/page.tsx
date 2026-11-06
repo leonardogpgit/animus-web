@@ -4,15 +4,8 @@ import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import {
-	FiLock,
-	FiShield,
 	FiArrowUpRight,
-	FiCheckCircle,
 	FiLogOut,
-	FiKey,
-	FiExternalLink,
-	FiEye,
-	FiEyeOff,
 	FiDownload,
 	FiFileText,
 	FiSmartphone,
@@ -20,10 +13,10 @@ import {
 	FiMail,
 	FiCheck,
 	FiCopy,
-	FiAlertTriangle,
-	FiLayers,
 	FiX,
-	FiCheckSquare,
+	FiEye,
+	FiEyeOff,
+	FiExternalLink,
 } from "react-icons/fi";
 
 interface EvaluatorData {
@@ -99,7 +92,7 @@ export default function ReviewPage() {
 		} catch (err: unknown) {
 			console.error("Evaluation verification failed:", err);
 			setError(
-				"Unable to verify passcode at this time. Please check network connectivity or contact legal@animusproject.org.",
+				"Unable to verify passcode at this time. Please check network connectivity or contact review@animusproject.org.",
 			);
 		} finally {
 			setLoading(false);
@@ -138,16 +131,7 @@ export default function ReviewPage() {
 			<main className="min-h-[calc(100svh-4rem)] flex items-center justify-center px-4 py-16 bg-[#e6ecf2] dark:bg-[#09090b]">
 				<div className="w-full max-w-md">
 					<div className="glass-panel p-8 sm:p-10 border border-slate-300/80 dark:border-white/10 bg-white/80 dark:bg-[#111116]/90 rounded-3xl backdrop-blur-md shadow-xl text-center space-y-6">
-						{/* Lock Icon */}
-						<div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-black dark:bg-white text-white dark:text-black shadow-md">
-							<FiLock className="h-6 w-6" />
-						</div>
-
 						<div className="space-y-2">
-							<span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-michroma font-bold uppercase tracking-wider bg-black/5 dark:bg-white/10 text-black/80 dark:text-white/80">
-								<FiShield className="h-3.5 w-3.5" />
-								Restricted Access
-							</span>
 							<h1 className="text-2xl sm:text-3xl font-extrabold font-heading text-black dark:text-white">
 								Institutional Review
 							</h1>
@@ -164,9 +148,6 @@ export default function ReviewPage() {
 
 						<form onSubmit={handleVerify} className="space-y-4">
 							<div className="relative">
-								<div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-black/40 dark:text-white/40">
-									<FiKey className="h-4 w-4" />
-								</div>
 								<input
 									type={showPasscode ? "text" : "password"}
 									value={passcode}
@@ -175,7 +156,7 @@ export default function ReviewPage() {
 									disabled={loading}
 									autoFocus
 									required
-									className="w-full pl-10 pr-11 py-3.5 rounded-xl border border-slate-300 dark:border-white/20 bg-white dark:bg-black/40 text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition"
+									className="w-full pl-4 pr-11 py-3.5 rounded-xl border border-slate-300 dark:border-white/20 bg-white dark:bg-black/40 text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition"
 								/>
 								<button
 									type="button"
@@ -240,11 +221,6 @@ export default function ReviewPage() {
 				<header className="glass-panel p-6 sm:p-8 border border-slate-300/80 dark:border-white/10 bg-white/80 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm">
 					<div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
 						<div className="space-y-2.5">
-							<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-michroma font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-								<FiCheckCircle className="h-3.5 w-3.5" />
-								<span>Authorized Evaluation Dossier</span>
-							</div>
-
 							<h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-heading text-black dark:text-white tracking-tight">
 								{welcomeTitle}
 							</h1>
@@ -305,30 +281,27 @@ export default function ReviewPage() {
 
 					{/* 3 Pillars of the Dossier */}
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-						<div className="p-4 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/5 space-y-2">
-							<div className="flex items-center gap-2 font-michroma text-xs font-bold text-black dark:text-white">
-								<FiLayers className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-								<span>Diagramas en Bloques</span>
+						<div className="p-5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/5 space-y-2">
+							<div className="font-michroma text-xs font-bold text-black dark:text-white">
+								Diagramas en Bloques
 							</div>
 							<p className="text-xs text-black/75 dark:text-white/75 font-sans leading-relaxed">
 								Arquitectura modular completa de tres capas (cliente soberano, pasarela de consenso commit-to-unlock y grafos Neo4j) con aislamiento estricto de código fuente propietario.
 							</p>
 						</div>
 
-						<div className="p-4 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/5 space-y-2">
-							<div className="flex items-center gap-2 font-michroma text-xs font-bold text-black dark:text-white">
-								<FiCheckSquare className="h-4 w-4 text-cyan-600 dark:text-cyan-400" />
-								<span>Fases de Desarrollo</span>
+						<div className="p-5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/5 space-y-2">
+							<div className="font-michroma text-xs font-bold text-black dark:text-white">
+								Fases de Desarrollo
 							</div>
 							<p className="text-xs text-black/75 dark:text-white/75 font-sans leading-relaxed">
 								Cronograma de 4 hitos ejecutables (Milestones 1 a 4): desde la Alpha privada actual hasta la migración de GPU, la cohorte auditada de 5,000 evaluadores y la federación mainnet.
 							</p>
 						</div>
 
-						<div className="p-4 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/5 space-y-2">
-							<div className="flex items-center gap-2 font-michroma text-xs font-bold text-black dark:text-white">
-								<FiLock className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-								<span>Asignación de Fondos</span>
+						<div className="p-5 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/5 space-y-2">
+							<div className="font-michroma text-xs font-bold text-black dark:text-white">
+								Asignación de Fondos
 							</div>
 							<p className="text-xs text-black/75 dark:text-white/75 font-sans leading-relaxed">
 								Desglose exacto de los fondos solicitados: servidores GPU dedicados (Moonshine STT y Kokoro TTS), clusters Neo4j Aura Enterprise, registro de marcas registradas USPTO y cohortes de prueba.
@@ -353,30 +326,17 @@ export default function ReviewPage() {
 					<div className="grid grid-cols-1 gap-6">
 						{/* TARJETA 1: ANIMUS */}
 						<div className="glass-panel p-6 sm:p-8 border border-slate-300/80 dark:border-white/10 bg-white/80 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm space-y-6">
-							<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-								<div className="flex items-center gap-3.5">
-									<div className="h-12 w-12 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold text-xl shadow-sm">
-										A
-									</div>
-									<div>
-										<h3 className="text-xl font-bold font-michroma text-black dark:text-white">
-											Animus
-										</h3>
-										<p className="text-xs font-mono text-black/60 dark:text-white/60">
-											animus.animusproject.org
-										</p>
-									</div>
-								</div>
-
-								<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 self-start sm:self-center">
-									<span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-									<span>Estado: Private Alpha (servidor de testeo interno)</span>
-								</div>
+							<div>
+								<h3 className="text-xl font-bold font-michroma text-black dark:text-white">
+									Animus
+								</h3>
+								<p className="text-xs font-mono text-black/60 dark:text-white/60 mb-2">
+									animus.animusproject.org · Private Alpha (servidor de testeo interno)
+								</p>
+								<p className="text-sm text-black/80 dark:text-white/80 font-sans leading-relaxed">
+									Red de consenso humano en tiempo real. Resuelve micro-dilemas bajo el protocolo estricto <em>commit-to-unlock</em> (dar para ver) para erradicar el sesgo de manada, con créditos de reciprocidad y cero telemetría publicitaria.
+								</p>
 							</div>
-
-							<p className="text-sm text-black/80 dark:text-white/80 font-sans leading-relaxed">
-								Red de consenso humano en tiempo real. Resuelve micro-dilemas bajo el protocolo estricto <em>commit-to-unlock</em> (dar para ver) para erradicar el sesgo de manada, con créditos de reciprocidad y cero telemetría publicitaria.
-							</p>
 
 							{/* Buttons */}
 							<div className="flex flex-wrap items-center gap-3 pt-2">
@@ -423,8 +383,8 @@ export default function ReviewPage() {
 
 							{/* Walkthrough */}
 							<div className="rounded-2xl bg-black/[0.02] dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-4 sm:p-5 space-y-3">
-								<div className="text-xs font-michroma font-bold uppercase tracking-wider text-black/70 dark:text-white/70 flex items-center gap-2">
-									<span>Walkthrough de Prueba (Cómo probarla en 2 minutos):</span>
+								<div className="text-xs font-michroma font-bold uppercase tracking-wider text-black/70 dark:text-white/70">
+									Walkthrough de Prueba (Cómo probarla en 2 minutos):
 								</div>
 								<ol className="space-y-2 text-xs sm:text-sm text-black/85 dark:text-white/85 font-sans leading-relaxed list-decimal list-inside">
 									<li>
@@ -442,30 +402,17 @@ export default function ReviewPage() {
 
 						{/* TARJETA 2: ANIMUS RESONANCE */}
 						<div className="glass-panel p-6 sm:p-8 border border-slate-300/80 dark:border-white/10 bg-white/80 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm space-y-6">
-							<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-								<div className="flex items-center gap-3.5">
-									<div className="h-12 w-12 rounded-2xl bg-cyan-500 text-white flex items-center justify-center font-bold text-xl shadow-sm shadow-cyan-500/20">
-										⚡
-									</div>
-									<div>
-										<h3 className="text-xl font-bold font-michroma text-black dark:text-white">
-											Animus Resonance
-										</h3>
-										<p className="text-xs font-mono text-black/60 dark:text-white/60">
-											resonance.animusproject.org
-										</p>
-									</div>
-								</div>
-
-								<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono font-semibold bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20 self-start sm:self-center">
-									<span className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse" />
-									<span>Estado: Private Alpha (módulo de afinidad multidimensional)</span>
-								</div>
+							<div>
+								<h3 className="text-xl font-bold font-michroma text-black dark:text-white">
+									Animus Resonance
+								</h3>
+								<p className="text-xs font-mono text-black/60 dark:text-white/60 mb-2">
+									resonance.animusproject.org · Private Alpha (módulo de afinidad multidimensional)
+								</p>
+								<p className="text-sm text-black/80 dark:text-white/80 font-sans leading-relaxed">
+									La capa de conexión humana anti-superficial. Empareja personas basándose exclusivamente en más del 90% de concordancia axiológica y ética calculada sobre dilemas de Animus, mediante revelación progresiva bilateral (revelación de máscara paso a paso).
+								</p>
 							</div>
-
-							<p className="text-sm text-black/80 dark:text-white/80 font-sans leading-relaxed">
-								La capa de conexión humana anti-superficial. Empareja personas basándose exclusivamente en más del 90% de concordancia axiológica y ética calculada sobre dilemas de Animus, mediante revelación progresiva bilateral (revelación de máscara paso a paso).
-							</p>
 
 							{/* Buttons */}
 							<div className="flex flex-wrap items-center gap-3 pt-2">
@@ -497,8 +444,8 @@ export default function ReviewPage() {
 
 							{/* Walkthrough */}
 							<div className="rounded-2xl bg-black/[0.02] dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-4 sm:p-5 space-y-3">
-								<div className="text-xs font-michroma font-bold uppercase tracking-wider text-black/70 dark:text-white/70 flex items-center gap-2">
-									<span>Walkthrough de Prueba:</span>
+								<div className="text-xs font-michroma font-bold uppercase tracking-wider text-black/70 dark:text-white/70">
+									Walkthrough de Prueba:
 								</div>
 								<ol className="space-y-2 text-xs sm:text-sm text-black/85 dark:text-white/85 font-sans leading-relaxed list-decimal list-inside">
 									<li>
@@ -516,36 +463,22 @@ export default function ReviewPage() {
 
 						{/* TARJETA 3: ANIMUS REMNANT */}
 						<div className="glass-panel p-6 sm:p-8 border border-slate-300/80 dark:border-white/10 bg-white/80 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm space-y-6">
-							<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-								<div className="flex items-center gap-3.5">
-									<div className="h-12 w-12 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold text-xl shadow-sm">
-										R
-									</div>
-									<div>
-										<h3 className="text-xl font-bold font-michroma text-black dark:text-white">
-											Animus Remnant
-										</h3>
-										<p className="text-xs font-mono text-black/60 dark:text-white/60">
-											remnant.animusproject.org
-										</p>
-									</div>
-								</div>
-
-								<div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono font-semibold bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20 self-start sm:self-center">
-									<span className="h-2 w-2 rounded-full bg-amber-500 animate-pulse" />
-									<span>Estado: Alpha Prototype</span>
-								</div>
+							<div>
+								<h3 className="text-xl font-bold font-michroma text-black dark:text-white">
+									Animus Remnant
+								</h3>
+								<p className="text-xs font-mono text-black/60 dark:text-white/60 mb-2">
+									remnant.animusproject.org · Alpha Prototype
+								</p>
+								<p className="text-sm text-black/80 dark:text-white/80 font-sans leading-relaxed">
+									Compañero de IA soberano de escritorio y móvil (Jarvis) y máscara viva de voz (<em>persona</em>). Sintetiza la memoria episódica personal en bóvedas privadas con clonación neuronal de voz auténtica.
+								</p>
 							</div>
 
-							<p className="text-sm text-black/80 dark:text-white/80 font-sans leading-relaxed">
-								Compañero de IA soberano de escritorio y móvil (Jarvis) y máscara viva de voz (<em>persona</em>). Sintetiza la memoria episódica personal en bóvedas privadas con clonación neuronal de voz auténtica.
-							</p>
-
 							{/* AVISO DE INGENIERÍA (Hardware Justification) */}
-							<div className="rounded-2xl border-2 border-amber-500/30 dark:border-amber-400/30 bg-amber-500/5 dark:bg-amber-400/5 p-4 sm:p-5 space-y-2">
-								<div className="flex items-center gap-2 font-michroma text-xs font-bold text-amber-800 dark:text-amber-300">
-									<FiAlertTriangle className="h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" />
-									<span>Aviso de Ingeniería & Justificación de Hardware:</span>
+							<div className="rounded-2xl border-2 border-amber-500/30 dark:border-amber-400/30 bg-amber-500/5 dark:bg-amber-400/5 p-4 sm:p-5 space-y-1.5">
+								<div className="font-michroma text-xs font-bold text-amber-800 dark:text-amber-300">
+									Aviso de Ingeniería &amp; Justificación de Hardware:
 								</div>
 								<p className="text-xs sm:text-sm text-amber-950 dark:text-amber-200 font-sans leading-relaxed italic">
 									&ldquo;Actualmente corre en cliente con Moonshine STT y Kokoro TTS en servidor ligero ($0 cost). La latencia y síntesis actuales justifican directamente los fondos de cómputo solicitados en esta propuesta.&rdquo;
@@ -597,8 +530,8 @@ export default function ReviewPage() {
 
 							{/* Walkthrough */}
 							<div className="rounded-2xl bg-black/[0.02] dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 p-4 sm:p-5 space-y-3">
-								<div className="text-xs font-michroma font-bold uppercase tracking-wider text-black/70 dark:text-white/70 flex items-center gap-2">
-									<span>Walkthrough de Prueba:</span>
+								<div className="text-xs font-michroma font-bold uppercase tracking-wider text-black/70 dark:text-white/70">
+									Walkthrough de Prueba:
 								</div>
 								<ol className="space-y-2 text-xs sm:text-sm text-black/85 dark:text-white/85 font-sans leading-relaxed list-decimal list-inside">
 									<li>
@@ -621,10 +554,6 @@ export default function ReviewPage() {
 				{/* ───────────────────────────────────────────────────────────── */}
 				<section className="glass-panel p-6 sm:p-8 md:p-10 border border-slate-300/80 dark:border-white/10 bg-white/90 dark:bg-[#111116]/90 rounded-3xl backdrop-blur-md shadow-md space-y-6">
 					<div className="space-y-2">
-						<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-michroma font-bold uppercase tracking-wider bg-black/5 dark:bg-white/10 text-black/80 dark:text-white/80">
-							<FiMail className="h-3.5 w-3.5" />
-							<span>Canal Directo de Evaluación · Prioridad Inmediata</span>
-						</div>
 						<h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-black dark:text-white">
 							¿Dudas técnicas o problemas con la instalación?
 						</h2>
@@ -709,14 +638,9 @@ export default function ReviewPage() {
 				<div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
 					<div className="glass-panel w-full max-w-lg p-6 sm:p-8 border border-slate-300/80 dark:border-white/20 bg-white dark:bg-[#111116] rounded-3xl shadow-2xl space-y-5">
 						<div className="flex items-start justify-between gap-3">
-							<div className="space-y-1">
-								<div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-black/5 dark:bg-white/10 text-black/70 dark:text-white/70">
-									Sandboxed Committee Build
-								</div>
-								<h3 className="text-xl font-bold font-michroma text-black dark:text-white">
-									Descarga: {modalInfo.appName}
-								</h3>
-							</div>
+							<h3 className="text-xl font-bold font-michroma text-black dark:text-white">
+								Descarga: {modalInfo.appName}
+							</h3>
 							<button
 								type="button"
 								onClick={() => setModalInfo(null)}

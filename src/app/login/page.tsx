@@ -4,7 +4,7 @@ import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
-import { FiArrowUpRight, FiCheckCircle, FiLock, FiLogOut } from "react-icons/fi";
+import { FiArrowUpRight, FiLogOut } from "react-icons/fi";
 
 function getValidRedirect(target: string | null): string {
 	if (!target) return "https://animus.animusproject.org/app/graph";
@@ -45,19 +45,7 @@ function LoginForm() {
 		return (
 			<section className="min-h-[calc(100svh-4rem)] flex items-center justify-center px-4 py-16">
 				<div className="glass-panel w-full max-w-md p-8 sm:p-10 border border-slate-300/80 dark:border-white/10 bg-white/80 dark:bg-[#111116]/90 rounded-3xl backdrop-blur-md shadow-xl text-center space-y-6">
-					<div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-black dark:bg-white text-white dark:text-black text-xl font-bold font-michroma shadow-md">
-						{user.displayName
-							? user.displayName.charAt(0).toUpperCase()
-							: user.email
-								? user.email.charAt(0).toUpperCase()
-								: "A"}
-					</div>
-
 					<div className="space-y-1">
-						<div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-michroma font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-							<FiCheckCircle className="h-3.5 w-3.5" />
-							<span>Session Active</span>
-						</div>
 						<h1 className="text-2xl font-bold font-heading text-black dark:text-white pt-1">
 							{user.displayName || "Animus Member"}
 						</h1>
@@ -134,9 +122,6 @@ function LoginForm() {
 		<section className="min-h-[calc(100svh-4rem)] flex items-center justify-center px-4 py-16">
 			<div className="glass-panel w-full max-w-md p-8 sm:p-10 border border-slate-300/80 dark:border-white/10 bg-white/80 dark:bg-[#111116]/90 rounded-3xl backdrop-blur-md shadow-xl space-y-6">
 				<div className="text-center space-y-2">
-					<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-black dark:bg-white text-white dark:text-black shadow-sm">
-						<FiLock className="h-5 w-5" />
-					</div>
 					<h1 className="text-2xl sm:text-3xl font-extrabold font-heading text-black dark:text-white">
 						{isSignUp ? "Crear Cuenta Unificada" : "Ingresar a Animus"}
 					</h1>

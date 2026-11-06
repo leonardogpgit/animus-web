@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiArrowUpRight, FiMessageSquare, FiMic, FiUsers, FiCpu, FiCheckCircle } from "react-icons/fi";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const fade = (delay = 0) => ({
 	initial: { opacity: 0, y: 16 },
@@ -35,15 +35,6 @@ export default function Ecosystem() {
 						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all"
 					>
 						<div>
-							<div className="flex items-center justify-between mb-6">
-								<div className="h-12 w-12 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold text-xl shadow-md">
-									A
-								</div>
-								<span className="rounded-full bg-black/5 dark:bg-white/10 px-3 py-1 text-xs font-mono font-semibold text-black/70 dark:text-white/70">
-									Daily Pulse
-								</span>
-							</div>
-
 							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
 								Animus
 							</h3>
@@ -56,16 +47,13 @@ export default function Ecosystem() {
 							</p>
 
 							<ul className="space-y-3 text-sm text-black/70 dark:text-white/70 font-sans mb-8">
-								<li className="flex items-center gap-2">
-									<FiCheckCircle className="h-4 w-4 text-emerald-500 shrink-0" />
+								<li>
 									<span><strong>Commit-to-Unlock:</strong> Zero herd mentality.</span>
 								</li>
-								<li className="flex items-center gap-2">
-									<FiCheckCircle className="h-4 w-4 text-emerald-500 shrink-0" />
+								<li>
 									<span><strong>Give to Ask:</strong> Earn credits by answering.</span>
 								</li>
-								<li className="flex items-center gap-2">
-									<FiCheckCircle className="h-4 w-4 text-emerald-500 shrink-0" />
+								<li>
 									<span><strong>Radical Anonymity:</strong> Zero PII, pure graph data.</span>
 								</li>
 							</ul>
@@ -90,15 +78,6 @@ export default function Ecosystem() {
 						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all"
 					>
 						<div>
-							<div className="flex items-center justify-between mb-6">
-								<div className="h-12 w-12 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center shadow-md">
-									<FiCpu className="h-6 w-6" />
-								</div>
-								<span className="rounded-full bg-cyan-500/10 dark:bg-cyan-500/20 px-3 py-1 text-xs font-mono font-semibold text-cyan-600 dark:text-cyan-300">
-									Living Likeness
-								</span>
-							</div>
-
 							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
 								Animus Remnant
 							</h3>
@@ -111,16 +90,13 @@ export default function Ecosystem() {
 							</p>
 
 							<ul className="space-y-3 text-sm text-black/70 dark:text-white/70 font-sans mb-8">
-								<li className="flex items-center gap-2">
-									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+								<li>
 									<span><strong>Desktop Autonomy:</strong> Local automation on Linux &amp; Windows.</span>
 								</li>
-								<li className="flex items-center gap-2">
-									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+								<li>
 									<span><strong>Cloned Neural Voice:</strong> Speaks and reasons with your real tone.</span>
 								</li>
-								<li className="flex items-center gap-2">
-									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+								<li>
 									<span><strong>Animus Synergy:</strong> Dilemmas automatically calibrate your mask.</span>
 								</li>
 							</ul>
@@ -145,15 +121,6 @@ export default function Ecosystem() {
 						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border-2 border-cyan-500/30 dark:border-cyan-400/30 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-cyan-500 dark:hover:border-cyan-400 transition-all"
 					>
 						<div>
-							<div className="flex items-center justify-between mb-6">
-								<div className="h-12 w-12 rounded-2xl bg-cyan-500 text-white flex items-center justify-center shadow-md shadow-cyan-500/20">
-									<FiUsers className="h-6 w-6" />
-								</div>
-								<span className="rounded-full bg-cyan-500/10 dark:bg-cyan-500/20 border border-cyan-500/30 px-3 py-1 text-xs font-mono font-semibold text-cyan-600 dark:text-cyan-300">
-									The Anti-Tinder
-								</span>
-							</div>
-
 							<h3 className="text-2xl sm:text-3xl font-bold font-michroma text-black dark:text-white mb-2">
 								Animus Resonance
 							</h3>
@@ -167,8 +134,8 @@ export default function Ecosystem() {
 
 							{/* Crucial Prerequisite Highlight Banner */}
 							<div className="mb-6 rounded-2xl bg-cyan-500/10 dark:bg-cyan-950/40 border border-cyan-500/30 p-4 text-xs font-sans text-black/90 dark:text-cyan-200 space-y-1.5">
-								<div className="font-bold font-michroma flex items-center gap-1.5 text-cyan-600 dark:text-cyan-300">
-									<span>Prerequisite: Powered by Animus</span>
+								<div className="font-bold font-michroma text-cyan-600 dark:text-cyan-300">
+									Prerequisite: Powered by Animus
 								</div>
 								<p className="leading-relaxed">
 									You must have an Animus account to use Resonance. <strong>The more dilemmas you answer in Animus, the sharper, deeper, and more accurate your resonance results become.</strong>
@@ -176,16 +143,13 @@ export default function Ecosystem() {
 							</div>
 
 							<ul className="space-y-3 text-sm text-black/70 dark:text-white/70 font-sans mb-8">
-								<li className="flex items-center gap-2">
-									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+								<li>
 									<span><strong>Multidimensional:</strong> Friends, project partners, gaming &amp; dating.</span>
 								</li>
-								<li className="flex items-center gap-2">
-									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+								<li>
 									<span><strong>Mind First:</strong> Blind matching, zero vanity photos or bios.</span>
 								</li>
-								<li className="flex items-center gap-2">
-									<FiCheckCircle className="h-4 w-4 text-cyan-500 shrink-0" />
+								<li>
 									<span><strong>Double-Blind:</strong> Mutual, bilateral progressive reveal.</span>
 								</li>
 							</ul>
