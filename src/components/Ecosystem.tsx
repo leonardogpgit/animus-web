@@ -42,21 +42,9 @@ export default function Ecosystem() {
 								animus.animusproject.org
 							</p>
 
-							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed mb-6">
-								The daily ritual for honest public consensus. Answer 10 to 20 micro-dilemmas in 3 minutes to unlock real-time collective intelligence without social media outrage.
+							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8">
+								The daily ritual for honest public consensus. Answer 10 to 20 micro-dilemmas in 3 minutes to unlock real-time collective intelligence without social media outrage. Features commit-to-unlock voting, inquiry credits via give-to-ask, and radical anonymity with zero personal tracking.
 							</p>
-
-							<ul className="space-y-3 text-xs text-black/70 dark:text-white/70 mb-8">
-								<li>
-									<span><strong>Commit-to-Unlock:</strong> Zero herd mentality.</span>
-								</li>
-								<li>
-									<span><strong>Give to Ask:</strong> Earn credits by answering.</span>
-								</li>
-								<li>
-									<span><strong>Radical Anonymity:</strong> Zero PII, pure graph data.</span>
-								</li>
-							</ul>
 						</div>
 
 						<div>
@@ -85,21 +73,9 @@ export default function Ecosystem() {
 								remnant.animusproject.org
 							</p>
 
-							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed mb-6">
-								Your proactive desktop companion (Jarvis) and living mask (*persona*). Synthesizes your moral convictions and real cloned voice into a private, sovereign memory vault.
+							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8">
+								Your proactive desktop companion and sovereign digital likeness. Jarvis automates daily computer tasks on Linux and Windows while learning how you think, allowing Remnant to speak and reason in your authentic cloned voice with complete offline privacy.
 							</p>
-
-							<ul className="space-y-3 text-xs text-black/70 dark:text-white/70 mb-8">
-								<li>
-									<span><strong>Desktop Autonomy:</strong> Local automation on Linux &amp; Windows.</span>
-								</li>
-								<li>
-									<span><strong>Cloned Neural Voice:</strong> Speaks and reasons with your real tone.</span>
-								</li>
-								<li>
-									<span><strong>Animus Synergy:</strong> Dilemmas automatically calibrate your mask.</span>
-								</li>
-							</ul>
 						</div>
 
 						<div>
@@ -128,31 +104,9 @@ export default function Ecosystem() {
 								resonance.animusproject.org
 							</p>
 
-							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed mb-6">
-								Multidimensional human connection without superficiality. Finds people with &gt;90% cognitive alignment based on your ethical and philosophical choices.
+							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8">
+								Multidimensional human connection without superficiality. Finds kindred minds with over 90% ethical and cognitive alignment computed directly from your Animus thought graph, using double-blind progressive disclosure where identities unlock only with mutual consent.
 							</p>
-
-							{/* Crucial Prerequisite Highlight Banner */}
-							<div className="mb-6 rounded-2xl bg-slate-200/50 dark:bg-white/5 border border-slate-300 dark:border-white/10 p-4 text-xs text-black/80 dark:text-white/80 space-y-1.5 font-sans">
-								<div className="font-semibold text-black dark:text-white">
-									Prerequisite: Powered by Animus
-								</div>
-								<p className="leading-relaxed">
-									You must have an Animus account to use Resonance. <strong>The more dilemmas you answer in Animus, the sharper, deeper, and more accurate your resonance results become.</strong>
-								</p>
-							</div>
-
-							<ul className="space-y-3 text-xs text-black/70 dark:text-white/70 mb-8">
-								<li>
-									<span><strong>Multidimensional:</strong> Friends, project partners, gaming &amp; dating.</span>
-								</li>
-								<li>
-									<span><strong>Mind First:</strong> Blind matching, zero vanity photos or bios.</span>
-								</li>
-								<li>
-									<span><strong>Double-Blind:</strong> Mutual, bilateral progressive reveal.</span>
-								</li>
-							</ul>
 						</div>
 
 						<div>

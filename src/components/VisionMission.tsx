@@ -34,7 +34,7 @@ export default function VisionMission() {
 							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-4">
 								Our Mission
 							</h3>
-							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed">
+							<p className="text-black/80 dark:text-white/80 text-sm sm:text-base leading-relaxed">
 								To dismantle the commercial outrage machine and eliminate herd mentality by deploying a real-time, zero-bias collective intelligence infrastructure.
 							</p>
 						</div>
@@ -49,7 +49,7 @@ export default function VisionMission() {
 							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-4">
 								Our Vision
 							</h3>
-							<p className="text-black/80 dark:text-white/80 text-xs sm:text-sm leading-relaxed">
+							<p className="text-black/80 dark:text-white/80 text-sm sm:text-base leading-relaxed">
 								A sovereign digital ecosystem where collective human truth, multidimensional interpersonal resonance, and personal memory synthesis coexist without exploitation.
 							</p>
 						</div>
