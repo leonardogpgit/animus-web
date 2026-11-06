@@ -25,34 +25,14 @@ export const site = {
 			label: "X (Twitter)",
 		},
 		{
-			url: "https://github.com/animusproject",
-			icon: "RiGithubFill",
-			label: "GitHub",
-		},
-		{
 			url: "https://discord.gg/animusproject",
 			icon: "RiDiscordFill",
 			label: "Discord",
 		},
 		{
-			url: "https://t.me/animusproject",
-			icon: "RiTelegram2Fill",
-			label: "Telegram",
-		},
-		{
-			url: "https://linkedin.com/company/animusproject",
-			icon: "RiLinkedinFill",
-			label: "LinkedIn",
-		},
-		{
 			url: "https://instagram.com/animusproject",
 			icon: "RiInstagramFill",
 			label: "Instagram",
-		},
-		{
-			url: "https://youtube.com/@animusproject",
-			icon: "RiYoutubeFill",
-			label: "YouTube",
 		},
 		{
 			url: "https://facebook.com/animusproject",
