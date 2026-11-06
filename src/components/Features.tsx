@@ -36,12 +36,12 @@ export default function Features() {
 					{/* Feature 1: Answer to Unlock */}
 					<motion.div
 						{...fade(0.1)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-sans"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[220px]"
 					>
-						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3">
+						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3 text-center font-michroma">
 							Answer to Unlock
 						</h3>
-						<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80">
+						<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 font-sans">
 							You must commit your own answer before seeing community
 							results. No herd mentality, no bandwagon bias, and no peek ahead.
 						</p>
@@ -50,12 +50,12 @@ export default function Features() {
 					{/* Feature 2: Radical Privacy */}
 					<motion.div
 						{...fade(0.2)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-sans"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[220px]"
 					>
-						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3">
+						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3 text-center font-michroma">
 							Anonymous by Design &amp; Zero Spyware
 						</h3>
-						<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80">
+						<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 font-sans">
 							No names, phone numbers, or tracking dossiers. Zero spyware or background telemetry—easily auditable by monitoring network traffic. Uncompromising encryption and permanent, unrecoverable deletion on demand.
 						</p>
 					</motion.div>
@@ -63,12 +63,12 @@ export default function Features() {
 					{/* Feature 3: Give to Ask */}
 					<motion.div
 						{...fade(0.3)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px] font-sans"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[220px]"
 					>
-						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3">
+						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3 text-center font-michroma">
 							Give to Ask
 						</h3>
-						<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80">
+						<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 font-sans">
 							Answer questions to earn credits, then spend credits to post
 							your own questions or boost their reach. A fair system that
 							prevents spam and keeps participation open.

@@ -32,17 +32,17 @@ export default function Ecosystem() {
 					{/* 1: Animus */}
 					<motion.div
 						{...fade(0.1)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all font-sans"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all"
 					>
 						<div>
-							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2">
+							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2 text-center font-michroma">
 								Animus
 							</h3>
-							<p className="text-xs text-black/60 dark:text-white/60 mb-6">
+							<p className="text-xs text-black/60 dark:text-white/60 mb-6 text-center font-michroma">
 								animus.animusproject.org
 							</p>
 
-							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8">
+							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8 font-sans">
 								The daily ritual for honest public consensus. Answer 10 to 20 micro-dilemmas in 3 minutes to unlock real-time collective intelligence without social media outrage. Features commit-to-unlock voting, inquiry credits via give-to-ask, and radical anonymity with zero personal tracking.
 							</p>
 						</div>
@@ -63,17 +63,17 @@ export default function Ecosystem() {
 					{/* App 2: Animus Remnant */}
 					<motion.div
 						{...fade(0.2)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all font-sans"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all"
 					>
 						<div>
-							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2">
+							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2 text-center font-michroma">
 								Animus Remnant
 							</h3>
-							<p className="text-xs text-black/60 dark:text-white/60 mb-6">
+							<p className="text-xs text-black/60 dark:text-white/60 mb-6 text-center font-michroma">
 								remnant.animusproject.org
 							</p>
 
-							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8">
+							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8 font-sans">
 								Your proactive desktop companion and sovereign digital likeness. Jarvis automates daily computer tasks on Linux and Windows while learning how you think, allowing Remnant to speak and reason in your authentic cloned voice with complete offline privacy.
 							</p>
 						</div>
@@ -94,17 +94,17 @@ export default function Ecosystem() {
 					{/* App 3: Animus Resonance */}
 					<motion.div
 						{...fade(0.3)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all font-sans"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm relative overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all"
 					>
 						<div>
-							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2">
+							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2 text-center font-michroma">
 								Animus Resonance
 							</h3>
-							<p className="text-xs text-black/60 dark:text-white/60 mb-6">
+							<p className="text-xs text-black/60 dark:text-white/60 mb-6 text-center font-michroma">
 								resonance.animusproject.org
 							</p>
 
-							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8">
+							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8 font-sans">
 								Multidimensional human connection without superficiality. Finds kindred minds with over 90% ethical and cognitive alignment computed directly from your Animus thought graph, using double-blind progressive disclosure where identities unlock only with mutual consent.
 							</p>
 						</div>

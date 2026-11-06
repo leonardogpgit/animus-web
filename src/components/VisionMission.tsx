@@ -28,13 +28,13 @@ export default function VisionMission() {
 					{/* Mission Card */}
 					<motion.div
 						{...fade(0.1)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm font-sans"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm"
 					>
 						<div>
-							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-4">
+							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-4 text-center font-michroma">
 								Our Mission
 							</h3>
-							<p className="text-black/80 dark:text-white/80 text-sm sm:text-base leading-relaxed">
+							<p className="text-black/80 dark:text-white/80 text-sm sm:text-base leading-relaxed font-sans">
 								To dismantle the commercial outrage machine and eliminate herd mentality by deploying a real-time, zero-bias collective intelligence infrastructure.
 							</p>
 						</div>
@@ -43,13 +43,13 @@ export default function VisionMission() {
 					{/* Vision Card */}
 					<motion.div
 						{...fade(0.2)}
-						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm font-sans"
+						className="glass-panel p-8 sm:p-10 flex flex-col justify-between border border-slate-300/80 dark:border-white/10 bg-white/60 dark:bg-[#111116]/80 rounded-3xl backdrop-blur-md shadow-sm"
 					>
 						<div>
-							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-4">
+							<h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-4 text-center font-michroma">
 								Our Vision
 							</h3>
-							<p className="text-black/80 dark:text-white/80 text-sm sm:text-base leading-relaxed">
+							<p className="text-black/80 dark:text-white/80 text-sm sm:text-base leading-relaxed font-sans">
 								A sovereign digital ecosystem where collective human truth, multidimensional interpersonal resonance, and personal memory synthesis coexist without exploitation.
 							</p>
 						</div>
