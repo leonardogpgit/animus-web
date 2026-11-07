@@ -19,12 +19,9 @@ export default function Ecosystem() {
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
 				{/* Section Header */}
 				<motion.div {...fade(0)} className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-					<h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-black dark:text-white mb-4">
+					<h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-black dark:text-white">
 						The Three Platforms
 					</h2>
-					<p className="text-sm sm:text-base text-black/75 dark:text-white/75 font-michroma leading-relaxed">
-						One collective graph of human truth powering three sovereign platforms.
-					</p>
 				</motion.div>
 
 				{/* 3 App Cards Grid */}
@@ -43,7 +40,7 @@ export default function Ecosystem() {
 							</p>
 
 							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8 font-sans">
-								The daily ritual for honest public consensus. Answer 10 to 20 micro-dilemmas in 3 minutes to unlock real-time collective intelligence without social media outrage. Features commit-to-unlock voting, inquiry credits via give-to-ask, and radical anonymity with zero personal tracking.
+								A new way to see the world is coming. Discover what humanity truly thinks—free from social media noise, manipulation, and algorithmic bias. Under wraps until launch.
 							</p>
 						</div>
 
@@ -74,7 +71,7 @@ export default function Ecosystem() {
 							</p>
 
 							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8 font-sans">
-								Your proactive desktop companion and sovereign digital likeness. Jarvis automates daily computer tasks on Linux and Windows while learning how you think, allowing Remnant to speak and reason in your authentic cloned voice with complete offline privacy.
+								Your personal AI companion and digital legacy. Jarvis assists with your daily computer tasks while learning how you think, allowing Remnant to speak and reason in your authentic voice with complete privacy.
 							</p>
 						</div>
 
@@ -105,7 +102,7 @@ export default function Ecosystem() {
 							</p>
 
 							<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 mb-8 font-sans">
-								Multidimensional human connection without superficiality. Finds kindred minds with over 90% ethical and cognitive alignment computed directly from your Animus thought graph, using double-blind progressive disclosure where identities unlock only with mutual consent.
+								A new way to meet people is coming. Genuine human connection for friendship, collaboration, and relationships—beyond superficiality. Under wraps until launch.
 							</p>
 						</div>
 

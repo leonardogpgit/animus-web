@@ -15,12 +15,12 @@ export default function Hero() {
 				className="container mx-auto my-auto px-4 sm:px-6 lg:px-8 text-center"
 			>
 				<h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-descscor font-extrabold tracking-tight text-black dark:text-white mb-6 sm:mb-8 max-w-5xl mx-auto leading-tight">
-					Tell us what you think
+					Animus Project
 				</h1>
 
 				<div className="mb-8 sm:mb-10 max-w-2xl mx-auto">
 					<p className="text-base sm:text-lg text-black/80 dark:text-white/80 font-sans leading-relaxed">
-						The real-time pulse of human thought. Answer dilemmas to reveal honest consensus without crowd bias, earn credits to ask your own, and power three sovereign platforms for truth, memory, and deep human connection.
+						A new way to see the world, a new way to meet people, and a new way to preserve who you are. Three sovereign platforms built on radical privacy and zero manipulation.
 					</p>
 				</div>
 
@@ -31,15 +31,6 @@ export default function Hero() {
 						className="w-full sm:w-auto inline-flex items-center justify-center font-michroma text-sm sm:text-base px-8 py-4 rounded-xl bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200 transition-colors shadow-xl shadow-black/10 font-bold"
 					>
 						Explore the Suite
-					</a>
-
-					<a
-						href="https://animus.animusproject.org"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="w-full sm:w-auto inline-flex items-center justify-center font-michroma text-sm sm:text-base px-8 py-4 rounded-xl border border-slate-300 dark:border-white/20 bg-white/60 dark:bg-white/10 text-black dark:text-white hover:bg-white/90 dark:hover:bg-white/20 transition-colors shadow-sm font-bold"
-					>
-						Open Animus
 					</a>
 				</div>
 			</motion.div>

@@ -20,58 +20,46 @@ export default function Features() {
 					{...fade(0)}
 					className="text-center max-w-3xl mx-auto mb-14 sm:mb-20"
 				>
-					<h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-black dark:text-white mb-4">
-						Every voice counts. <br />
-						<span className="text-black/80 dark:text-white/80 font-heading">
-							Every bias removed.
-						</span>
+					<h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-black dark:text-white">
+						Core Principles
 					</h2>
-					<p className="text-sm sm:text-base text-black/80 dark:text-white/80 font-michroma">
-						100% free, anonymous, and powered by reciprocity.
-					</p>
 				</motion.div>
 
 				{/* 3 Core Features Grid */}
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-					{/* Feature 1: Answer to Unlock */}
 					<motion.div
 						{...fade(0.1)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px]"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[200px]"
 					>
 						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3 text-center font-michroma">
-							Answer to Unlock
+							Zero Manipulation
 						</h3>
 						<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 font-sans">
-							You must commit your own answer before seeing community
-							results. No herd mentality, no bandwagon bias, and no peek ahead.
+							Built without outrage algorithms, vanity metrics, or commercial bias.
 						</p>
 					</motion.div>
 
-					{/* Feature 2: Radical Privacy */}
 					<motion.div
 						{...fade(0.2)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px]"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[200px]"
 					>
 						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3 text-center font-michroma">
-							Anonymous by Design &amp; Zero Spyware
+							Radical Privacy
 						</h3>
 						<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 font-sans">
-							No names, phone numbers, or tracking dossiers. Zero spyware or background telemetry—easily auditable by monitoring network traffic. Uncompromising encryption and permanent, unrecoverable deletion on demand.
+							Zero spyware, zero tracking SDKs, and zero covert telemetry—auditable at the network level.
 						</p>
 					</motion.div>
 
-					{/* Feature 3: Give to Ask */}
 					<motion.div
 						{...fade(0.3)}
-						className="glass-panel p-8 flex flex-col justify-start min-h-[220px]"
+						className="glass-panel p-8 flex flex-col justify-start min-h-[200px]"
 					>
 						<h3 className="text-lg sm:text-xl font-bold text-black dark:text-white mb-3 text-center font-michroma">
-							Give to Ask
+							Sovereign Identity
 						</h3>
 						<p className="text-sm sm:text-base leading-relaxed text-black/80 dark:text-white/80 font-sans">
-							Answer questions to earn credits, then spend credits to post
-							your own questions or boost their reach. A fair system that
-							prevents spam and keeps participation open.
+							You own your data, your voice, and your connections, with permanent cryptographic deletion on demand.
 						</p>
 					</motion.div>
 				</div>

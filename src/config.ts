@@ -4,19 +4,15 @@ export const site = {
 	name: "Animus Project",
 	url: "https://animusproject.org",
 	description:
-		"An open, anonymous consensus network and sovereign application suite. 100% free, privacy-first, and powered by reciprocity.",
+		"A new way to see the world, a new way to connect with people, and a new way to preserve who you are. Privacy-first sovereign technology.",
 	logo: "/favicon.svg",
 	keywords: [
 		"animus",
 		"animus project",
-		"human consensus",
-		"collective mind",
 		"remnant",
 		"resonance",
-		"opinion",
-		"demographics",
-		"neo4j",
-		"reciprocity",
+		"privacy",
+		"sovereign technology",
 	],
 	social: [
 		{
